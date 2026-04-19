@@ -21,8 +21,8 @@ if (hasHelpFlag(Bun.argv.slice(2))) {
 }
 
 const agentUrl = process.env.AGENT_URL_LOCAL ?? "http://localhost:1337";
-const tailUrl = process.env.TAIL_URL_LOCAL ?? "http://localhost:1340";
-const dashboardUrl = process.env.DASHBOARD_URL_LOCAL ?? "http://localhost:5175";
+const tailUrl = process.env.TAIL_URL_LOCAL ?? "http://localhost:1338";
+const dashboardUrl = process.env.DASHBOARD_URL_LOCAL ?? "http://localhost:5173";
 const wsUrl = agentUrl.replace(/^http/u, "ws") + "/ws";
 
 const results: CheckResult[] = [];
@@ -67,7 +67,9 @@ async function checkHttp(
   accept: (status: number) => boolean,
 ): Promise<CheckResult> {
   const started = Date.now();
-  const response = await fetch(url).catch((err: unknown) => err);
+  const response = await fetch(url, {
+    signal: AbortSignal.timeout(3000),
+  }).catch((err: unknown) => err);
 
   if (response instanceof Error) {
     return {
@@ -81,12 +83,14 @@ async function checkHttp(
     };
   }
 
-  const status = (response as Response).status;
+  const res = response as Response;
+  // Drain so bun frees the connection before the WS check opens another socket.
+  await res.arrayBuffer().catch(() => new ArrayBuffer(0));
 
   return {
     name,
-    ok: accept(status),
-    detail: { url, status, ms: Date.now() - started },
+    ok: accept(res.status),
+    detail: { url, status: res.status, ms: Date.now() - started },
   };
 }
 
@@ -208,8 +212,8 @@ function writeUsage(): void {
       "",
       "Sanity-checks the local `bun run dev` loop:",
       "  - agent     http://localhost:1337/     (expect 200)",
-      "  - tail      http://localhost:1340/     (expect 1101, no fetch handler)",
-      "  - dashboard http://localhost:5175/     (expect 200)",
+      "  - tail      http://localhost:1338/     (expect 1101, no fetch handler)",
+      "  - dashboard http://localhost:5173/     (expect 200)",
       "  - clickhouse SELECT 1",
       "  - agent ws://localhost:1337/ws first frame type == 'hello' (3s timeout)",
       "",

@@ -1,11 +1,40 @@
 # olly
 
-An always-warm, stateful agent per workspace that watches production logs,
-decides when something is really broken, investigates, and ships a fix as a
-PR — without paging a human. See `SPEC.md` for the full design. This README
-is the operator runbook.
+the always on, on-call engineer
 
+this you with olly :)
 ![sleep ez](bedge-pepe-sleep.gif)
+
+## flow d
+```
+                 demo worker (planted bug)
+                         │ console.log/error
+                         ▼
+                 tail worker  ──── dumb filter ────► ClickHouse Cloud
+                         │                            (logs table)
+                         │ signal (on match)
+                         ▼
+                 Workspace DO ──── state machine ────► OpenCode Zen / Sonnet 4.6 (streaming)
+                   │ │  │                                    │
+                   │ │  └──► ClickHouse tool calls ◄─────────┘
+                   │ └────► shell/git tools (clone, read, diff, commit, push)
+                   └──────► GitHub API (open PR)
+                         │
+                         ▼
+                     Dashboard (WebSocket: state, tool calls, tokens, diff, PR link)
+```
+
+## State machine
+
+One workspace DO per workspace. Incidents run sequentially inside it (single-tier). States:
+
+1. `TRIAGE` — dedupe against recent incidents in ClickHouse, check error rate, LLM decides real vs noise.
+2. `GATHER` — pull recent logs, recent deploys, clone repo via shell/git into the workspace FS.
+3. `HYPOTHESIZE` — agent runs in codemode sandbox with state + git + ClickHouse tools; reasons freely, calls whatever it needs, produces a root-cause hypothesis.
+4. `PATCH` — agent edits files in the workspace FS, produces a diff.
+5. `PR` — branch, commit, push, open PR via GitHub API; post PR link to dashboard.
+6. `MONITOR` — DO alarm sleeps for 10min (30s in demo mode), wakes, queries ClickHouse for same error signature, marks incident resolved or escalated.
+
 
 ## Repo layout
 
@@ -21,43 +50,6 @@ olly/
   logs/              tee'd output from `bun run dev`
 ```
 
-## Prereqs
-
-- Bun (>= 1.2)
-- nvm + Node LTS (the dev script `nvm use`'s for workerd compatibility)
-- wrangler auth to a Cloudflare account with Workers + DO (`wrangler login`)
-- Access to the ClickHouse service at
-  `ihguwjq35c.ap-south-1.aws.clickhouse.cloud:8443`
-- GitHub fine-grained PAT for `muzzlol/olly-demo-app`
-
-## Setup
-
-```
-git clone <this-repo> olly && cd olly
-bun install
-```
-
-There is no `.env.example` — populate `.env` yourself with the keys listed in
-`SPEC.md` under **Secrets**. `lib/env.ts#validateRootEnv` will fail fast at
-boot if required keys are missing.
-
-## ClickHouse bootstrap
-
-Run once per environment (idempotent):
-
-```
-bun run ch:bootstrap
-```
-
-Probe the table any time:
-
-```
-bun run ch:query                       # last 20 rows
-bun run ch:query "SELECT count() FROM logs"
-```
-
-## Dev loop
-
 ```
 bun run dev
 ```
@@ -65,20 +57,11 @@ bun run dev
 Brings up `olly-tail`, `olly-agent`, `olly-dashboard` under `alchemy dev`
 (workerd) and tees to `logs/dev.log`.
 
-| service   | URL                      | notes |
-| --------- | ------------------------ | ----- |
-| agent     | http://localhost:1337/   | `/ws` for dashboard, `/signal` for tail, `/internal/reset-incident` for ops |
-| tail      | http://localhost:1340/   | no fetch handler (500/1101 expected) |
-| dashboard | http://localhost:5175/   | TanStack vite dev |
-
 Smoke test the loop:
 
 ```
 bun run smoke
 ```
-
-Checks HTTP on all three, `SELECT 1` on ClickHouse, and the agent WS first
-frame. Exits 1 on any failure.
 
 ## Demo run
 

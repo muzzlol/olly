@@ -9,6 +9,8 @@ dist
 # code coverage
 coverage
 *.lcov
+agents/
+.alchemy
 
 # dotenv environment variable files
 .env

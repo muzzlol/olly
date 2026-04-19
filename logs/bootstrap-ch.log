@@ -1,0 +1,2 @@
+{"ts":"2026-04-19T09:17:06.061Z","service":"bootstrap-ch","level":"info","event":"ch.bootstrap_start","database":"default"}
+{"ts":"2026-04-19T09:17:08.216Z","service":"bootstrap-ch","level":"info","event":"ch.bootstrap_done","database":"default","table":"logs","exists":true,"engine":"SharedMergeTree"}

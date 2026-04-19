@@ -1,0 +1,1330 @@
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1337/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1338/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[33mYou are using Node.js 20.9.0. Vite requires Node.js version 20.19+ or 22.12+. Please upgrade your Node.js version.[39m
+[31mfailed to load config from /Users/muzz/dev/olly/apps/dashboard/vite.config.ts[39m
+[31merror when starting dev server:
+TypeError [ERR_IMPORT_ASSERTION_TYPE_MISSING]: Module "file:///Users/muzz/dev/olly/node_modules/.bun/wrangler@4.83.0+76071172b2ca6585/node_modules/wrangler/package.json" needs an import assertion of type "json"
+    at new NodeError (node:internal/errors:406:5)
+    at validateAssertions (node:internal/modules/esm/assert:94:15)
+    at defaultLoad (node:internal/modules/esm/load:122:3)
+    at nextLoad (node:internal/modules/esm/hooks:833:28)
+    at Hooks.load (node:internal/modules/esm/hooks:416:26)
+    at handleMessage (node:internal/modules/esm/worker:168:24)
+    at Immediate.checkForMessages (node:internal/modules/esm/worker:117:28)
+    at process.processImmediate (node:internal/timers:478:21)[39m
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1337/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1338/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[33mYou are using Node.js 20.9.0. Vite requires Node.js version 20.19+ or 22.12+. Please upgrade your Node.js version.[39m
+[31mfailed to load config from /Users/muzz/dev/olly/apps/dashboard/vite.config.ts[39m
+[31merror when starting dev server:
+TypeError [ERR_IMPORT_ASSERTION_TYPE_MISSING]: Module "file:///Users/muzz/dev/olly/node_modules/.bun/wrangler@4.83.0+76071172b2ca6585/node_modules/wrangler/package.json" needs an import assertion of type "json"
+    at new NodeError (node:internal/errors:406:5)
+    at validateAssertions (node:internal/modules/esm/assert:94:15)
+    at defaultLoad (node:internal/modules/esm/load:122:3)
+    at nextLoad (node:internal/modules/esm/hooks:833:28)
+    at Hooks.load (node:internal/modules/esm/hooks:416:26)
+    at MessagePort.handleMessage (node:internal/modules/esm/worker:168:24)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:807:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28)[39m
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[96m[dev]       [0m[90molly-tail[0m Rebuilding
+[96m[dev]       [0m[90molly-tail[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1339/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1340/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+Port 5173 is in use, trying another one...
+
+  [32m[1mVITE[22m v7.3.2[39m  [2mready in [0m[1m4328[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://localhost:[1m5174[22m[2m/__debug[39m[22m
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T09:38:57.159Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1339/","agentUrl":"http://localhost:1340/","dashboardUrl":"http://localhost:5174/"}
+[91m[deleting]  [0m[90molly-dashboard-build[0m Deleting Resource...
+[92m[deleted]   [0m[90molly-dashboard-build[0m Deleted Resource
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1341/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1342/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T09:39:45.105Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1341/","agentUrl":"http://localhost:1342/","dashboardUrl":"http://localhost:5174/"}
+[96m[dev]       [0m[90molly-tail[0m Rebuilding
+[96m[dev]       [0m[90molly-tail[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-tail[0m Updated
+[96m[dev]       [0m[90molly-tail[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-tail[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-tail[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Updated
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[0m[31m[31mworkerd/server/server.c++:1937: warning: A DurableObjectNamespace in the config referenced the class "WorkspaceDO", but no such Durable Object class is exported from the worker. Please make sure the class name matches, it is exported, and the class extends 'DurableObject'. Attempts to call to this Durable Object class will fail at runtime, but historically this was not a startup-time error. Future versions of workerd may make this a startup-time error.[39m[0m
+[0m[31m[31mworkerd/server/server.c++:1937: warning: A DurableObjectNamespace in the config referenced the class "WorkspaceDO", but no such Durable Object class is exported from the worker. Please make sure the class name matches, it is exported, and the class extends 'DurableObject'. Attempts to call to this Durable Object class will fail at runtime, but historically this was not a startup-time error. Future versions of workerd may make this a startup-time error.[39m[0m
+[0m[31m[31mworkerd/server/server.c++:1937: warning: A DurableObjectNamespace in the config referenced the class "WorkspaceDO", but no such Durable Object class is exported from the worker. Please make sure the class name matches, it is exported, and the class extends 'DurableObject'. Attempts to call to this Durable Object class will fail at runtime, but historically this was not a startup-time error. Future versions of workerd may make this a startup-time error.[39m[0m
+[0m[31m[31mSocket "direct:0:WorkspaceDO" refers to service "core:user:olly-olly-tail-muzz" with a named entrypoint "WorkspaceDO", but "core:user:olly-olly-tail-muzz" has no such named entrypoint.[39m[0m
+[0m[31m[31mSocket "direct:0:WorkspaceDO" refers to service "core:user:olly-olly-tail-muzz" with a named entrypoint "WorkspaceDO", but "core:user:olly-olly-tail-muzz" has no such named entrypoint.[39m[0m
+[0m[31m[91mERROR[0m Scope failed olly/muzz/olly-tail[0m
+[0m[31m[91mERROR[0m Scope failed olly/muzz/olly-tail[0m
+[93mWARN[0m Scope is in error, skipping finalize
+[93mWARN[0m Scope is in error, skipping finalize
+[0m[31m[91mERROR[0m Scope failed olly/muzz[0m
+[0m[31m[91mERROR[0m Scope failed olly/muzz[0m
+[0m[1m82569 |[0m       [0m[33mthis[0m.#workerOpts[0m[3m[1m.flatMap[0m((w2) => w2.core.name ?? []),
+[0m[1m82569 |[0m       [0m[33mthis[0m.#workerOpts[0m[3m[1m.flatMap[0m((w2) => w2.core.name ?? []),
+[0m[1m82570 |[0m       [0m[33mthis[0m.#disposeController.signal
+[0m[1m82571 |[0m     )[0m[2m;[0m
+[0m[1m82570 |[0m       [0m[33mthis[0m.#disposeController.signal
+[0m[1m82572 |[0m     [0m[35mif[0m ([0m[33mthis[0m.#disposeController.signal.aborted) [0m[35mreturn[0m[0m[2m;[0m
+[0m[1m82571 |[0m     )[0m[2m;[0m
+[0m[1m82572 |[0m     [0m[35mif[0m ([0m[33mthis[0m.#disposeController.signal.aborted) [0m[35mreturn[0m[0m[2m;[0m
+[0m[1m82573 |[0m     [0m[35mif[0m (maybeSocketPorts === [0m[35mvoid[0m [0m[33m0[0m) {
+[0m[1m82574 |[0m       [0m[35mthrow[0m [0m[35mnew[0m [0m[1mMiniflareCoreError[0m(
+[0m[1m82573 |[0m     [0m[35mif[0m (maybeSocketPorts === [0m[35mvoid[0m [0m[33m0[0m) {
+                        [31m[1m^[0m
+[0m[31mMiniflareCoreError [ERR_RUNTIME_FAILURE][0m[2m:[0m [1mThe Workers runtime failed to start. There is likely additional logging output above.[0m
+ cause[0m[2m:[0m [0m[2mundefined[0m[0m[2m,[0m
+  code[0m[2m:[0m [32m"ERR_RUNTIME_FAILURE"[0m
+
+[0m[1m82574 |[0m       [0m[35mthrow[0m [0m[35mnew[0m [0m[1mMiniflareCoreError[0m(
+[0m      [2mat [0m#assembleAndUpdateConfig[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/miniflare@4.20260310.0/node_modules/miniflare/dist/src/index.js[0m[2m:[0m[33m82574[0m[2m:[33m17[0m[2m)[0m
+                        [31m[1m^[0m
+[0m[31mMiniflareCoreError [ERR_RUNTIME_FAILURE][0m[2m:[0m [1mThe Workers runtime failed to start. There is likely additional logging output above.[0m
+[0m      [2mat [0mprocessTicksAndRejections[2m ([0m[0m[36mnative[0m[2m:[0m[33m7[0m[2m:[33m39[0m[2m)[0m
+ cause[0m[2m:[0m [0m[2mundefined[0m[0m[2m,[0m
+  code[0m[2m:[0m [32m"ERR_RUNTIME_FAILURE"[0m
+
+[0m      [2mat [0m#assembleAndUpdateConfig[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/miniflare@4.20260310.0/node_modules/miniflare/dist/src/index.js[0m[2m:[0m[33m82574[0m[2m:[33m17[0m[2m)[0m
+[0m      [2mat [0mprocessTicksAndRejections[2m ([0m[0m[36mnative[0m[2m:[0m[33m7[0m[2m:[33m39[0m[2m)[0m
+[0m[31m[31mSocket "direct:0:WorkspaceDO" refers to service "core:user:olly-olly-tail-muzz" with a named entrypoint "WorkspaceDO", but "core:user:olly-olly-tail-muzz" has no such named entrypoint.[39m[0m
+[0m[31m[91mERROR[0m Scope failed olly/muzz/olly-tail[0m
+[93mWARN[0m Scope is in error, skipping finalize
+[0m[31m[91mERROR[0m Scope failed olly/muzz[0m
+[0m[1m82569 |[0m       [0m[33mthis[0m.#workerOpts[0m[3m[1m.flatMap[0m((w2) => w2.core.name ?? []),
+[0m[1m82570 |[0m       [0m[33mthis[0m.#disposeController.signal
+[0m[1m82571 |[0m     )[0m[2m;[0m
+[0m[1m82572 |[0m     [0m[35mif[0m ([0m[33mthis[0m.#disposeController.signal.aborted) [0m[35mreturn[0m[0m[2m;[0m
+[0m[1m82573 |[0m     [0m[35mif[0m (maybeSocketPorts === [0m[35mvoid[0m [0m[33m0[0m) {
+[0m[1m82574 |[0m       [0m[35mthrow[0m [0m[35mnew[0m [0m[1mMiniflareCoreError[0m(
+                        [31m[1m^[0m
+[0m[31mMiniflareCoreError [ERR_RUNTIME_FAILURE][0m[2m:[0m [1mThe Workers runtime failed to start. There is likely additional logging output above.[0m
+ cause[0m[2m:[0m [0m[2mundefined[0m[0m[2m,[0m
+  code[0m[2m:[0m [32m"ERR_RUNTIME_FAILURE"[0m
+
+[0m      [2mat [0m#assembleAndUpdateConfig[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/miniflare@4.20260310.0/node_modules/miniflare/dist/src/index.js[0m[2m:[0m[33m82574[0m[2m:[33m17[0m[2m)[0m
+[0m      [2mat [0mprocessTicksAndRejections[2m ([0m[0m[36mnative[0m[2m:[0m[33m7[0m[2m:[33m39[0m[2m)[0m
+[96m[dev]       [0m[90molly-tail[0m Rebuilding
+[96m[dev]       [0m[90molly-tail[0m Rebuilding
+[96m[dev]       [0m[90molly-tail[0m Rebuilding
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1337/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[93mWARN[0m Port 1337 is already in use, trying 1338...
+[93mWARN[0m Port 1337 is already in use, trying 1338...
+[93mWARN[0m Port 1338 is already in use, trying 1339...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1338/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1339/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1340/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[93mWARN[0m Port 1340 is already in use, trying 1341...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1341/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[93mWARN[0m Port 1340 is already in use, trying 1341...
+[93mWARN[0m Port 1341 is already in use, trying 1342...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1342/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[33mYou are using Node.js 20.9.0. Vite requires Node.js version 20.19+ or 22.12+. Please upgrade your Node.js version.[39m
+[33mYou are using Node.js 20.9.0. Vite requires Node.js version 20.19+ or 22.12+. Please upgrade your Node.js version.[39m
+[33mYou are using Node.js 20.9.0. Vite requires Node.js version 20.19+ or 22.12+. Please upgrade your Node.js version.[39m
+[31mfailed to load config from /Users/muzz/dev/olly/apps/dashboard/vite.config.ts[39m
+[31merror when starting dev server:
+TypeError [ERR_IMPORT_ASSERTION_TYPE_MISSING]: Module "file:///Users/muzz/dev/olly/node_modules/.bun/wrangler@4.83.0+76071172b2ca6585/node_modules/wrangler/package.json" needs an import assertion of type "json"
+[31mfailed to load config from /Users/muzz/dev/olly/apps/dashboard/vite.config.ts[39m
+    at new NodeError (node:internal/errors:406:5)
+    at validateAssertions (node:internal/modules/esm/assert:94:15)
+    at defaultLoad (node:internal/modules/esm/load:122:3)
+[31merror when starting dev server:
+TypeError [ERR_IMPORT_ASSERTION_TYPE_MISSING]: Module "file:///Users/muzz/dev/olly/node_modules/.bun/wrangler@4.83.0+76071172b2ca6585/node_modules/wrangler/package.json" needs an import assertion of type "json"
+    at new NodeError (node:internal/errors:406:5)
+[31mfailed to load config from /Users/muzz/dev/olly/apps/dashboard/vite.config.ts[39m
+    at nextLoad (node:internal/modules/esm/hooks:833:28)
+[31merror when starting dev server:
+    at validateAssertions (node:internal/modules/esm/assert:94:15)
+TypeError [ERR_IMPORT_ASSERTION_TYPE_MISSING]: Module "file:///Users/muzz/dev/olly/node_modules/.bun/wrangler@4.83.0+76071172b2ca6585/node_modules/wrangler/package.json" needs an import assertion of type "json"
+    at Hooks.load (node:internal/modules/esm/hooks:416:26)
+    at new NodeError (node:internal/errors:406:5)
+    at MessagePort.handleMessage (node:internal/modules/esm/worker:168:24)
+    at defaultLoad (node:internal/modules/esm/load:122:3)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:807:20)
+    at validateAssertions (node:internal/modules/esm/assert:94:15)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28)[39m
+    at nextLoad (node:internal/modules/esm/hooks:833:28)
+    at defaultLoad (node:internal/modules/esm/load:122:3)
+    at Hooks.load (node:internal/modules/esm/hooks:416:26)
+    at nextLoad (node:internal/modules/esm/hooks:833:28)
+    at Hooks.load (node:internal/modules/esm/hooks:416:26)
+    at MessagePort.handleMessage (node:internal/modules/esm/worker:168:24)
+    at MessagePort.handleMessage (node:internal/modules/esm/worker:168:24)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:807:20)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:807:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28)[39m
+    at exports.emitMessage (node:internal/per_context/messageport:23:28)[39m
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[2mDefault inspector port 9229 not available, using 9230 instead
+[2mDefault inspector port 9229 not available, using 9230 instead
+[2mDefault inspector port 9229 not available, using 9230 instead
+[22m
+[22m
+[22m
+[2mDefault inspector port 9229 not available, using 9230 instead
+[2mDefault inspector port 9229 not available, using 9230 instead
+[2mDefault inspector port 9229 not available, using 9230 instead
+[22m
+[22m
+[22m
+node:events:486
+node:events:486
+node:events:486
+      throw er; // Unhandled 'error' event
+      throw er; // Unhandled 'error' event
+      throw er; // Unhandled 'error' event
+      ^
+      ^
+
+      ^
+
+Error: listen EADDRINUSE: address already in use 127.0.0.1:9230
+
+Error: listen EADDRINUSE: address already in use 127.0.0.1:9230
+[90m    at Server.setupListenHandle [as _listen2] (node:net:1940:16)[39m
+[90m    at Server.setupListenHandle [as _listen2] (node:net:1940:16)[39m
+Error: listen EADDRINUSE: address already in use 127.0.0.1:9230
+[90m    at listenInCluster (node:net:1997:12)[39m
+[90m    at listenInCluster (node:net:1997:12)[39m
+[90m    at Server.setupListenHandle [as _listen2] (node:net:1940:16)[39m
+[90m    at node:net:2206:7[39m
+[90m    at node:net:2206:7[39m
+[90m    at listenInCluster (node:net:1997:12)[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m
+[90m    at node:net:2206:7[39m
+Emitted 'error' event on WebSocketServer instance at:
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m
+[90m    at Server.emit (node:events:520:35)[39m
+Emitted 'error' event on WebSocketServer instance at:
+[90m    at Server.emit (node:domain:489:12)[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m
+[90m    at Server.emit (node:events:520:35)[39m
+[90m    at emitErrorNT (node:net:1976:8)[39m
+Emitted 'error' event on WebSocketServer instance at:
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m {
+[90m    at Server.emit (node:domain:489:12)[39m
+[90m    at Server.emit (node:events:520:35)[39m
+  code: [32m'EADDRINUSE'[39m,
+[90m    at emitErrorNT (node:net:1976:8)[39m
+  errno: [33m-48[39m,
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m {
+[90m    at Server.emit (node:domain:489:12)[39m
+  syscall: [32m'listen'[39m,
+[90m    at emitErrorNT (node:net:1976:8)[39m
+  code: [32m'EADDRINUSE'[39m,
+  address: [32m'127.0.0.1'[39m,
+  errno: [33m-48[39m,
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m {
+  port: [33m9230[39m
+  code: [32m'EADDRINUSE'[39m,
+}
+  errno: [33m-48[39m,
+  syscall: [32m'listen'[39m,
+
+  address: [32m'127.0.0.1'[39m,
+Node.js v24.9.0
+  port: [33m9230[39m
+}
+
+  syscall: [32m'listen'[39m,
+Node.js v24.9.0
+  address: [32m'127.0.0.1'[39m,
+  port: [33m9230[39m
+}
+
+Node.js v24.9.0
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+Port 5173 is in use, trying another one...
+Port 5173 is in use, trying another one...
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+
+  [32m[1mVITE[22m v7.3.2[39m  [2mready in [0m[1m1821[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5175[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://localhost:[1m5175[22m[2m/__debug[39m[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1me + enter[22m[2m to open local explorer[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mb + enter[22m[2m to list configured Cloudflare bindings[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Port 5174 is in use, trying another one...
+
+  [32m[1mVITE[22m v7.3.2[39m  [2mready in [0m[1m1821[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5175[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://localhost:[1m5175[22m[2m/__debug[39m[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1me + enter[22m[2m to open local explorer[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mb + enter[22m[2m to list configured Cloudflare bindings[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Port 5174 is in use, trying another one...
+
+  [32m[1mVITE[22m v7.3.2[39m  [2mready in [0m[1m1821[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5175[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://localhost:[1m5175[22m[2m/__debug[39m[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1me + enter[22m[2m to open local explorer[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mb + enter[22m[2m to list configured Cloudflare bindings[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T09:55:20.906Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1340/","agentUrl":"http://localhost:1337/","dashboardUrl":"http://localhost:5175/"}
+{"ts":"2026-04-19T09:55:20.919Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1341/","agentUrl":"http://localhost:1338/","dashboardUrl":"http://localhost:5175/"}
+{"ts":"2026-04-19T09:55:20.927Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1342/","agentUrl":"http://localhost:1339/","dashboardUrl":"http://localhost:5175/"}
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1343/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1344/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[2mDefault inspector port 9229 not available, using 9231 instead
+[22m
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+Port 5175 is in use, trying another one...
+
+  [32m[1mVITE[22m v7.3.2[39m  [2mready in [0m[1m1846[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5176[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://localhost:[1m5176[22m[2m/__debug[39m[22m
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T09:55:31.448Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1344/","agentUrl":"http://localhost:1343/","dashboardUrl":"http://localhost:5176/"}
+Warning: A notFoundError was encountered on the route with ID "__root__", but a notFoundComponent option was not configured, nor was a router level defaultNotFoundComponent configured. Consider configuring at least one of these to avoid TanStack Router's overly generic defaultNotFoundComponent (<p>Not Found</p>)
+Warning: A notFoundError was encountered on the route with ID "__root__", but a notFoundComponent option was not configured, nor was a router level defaultNotFoundComponent configured. Consider configuring at least one of these to avoid TanStack Router's overly generic defaultNotFoundComponent (<p>Not Found</p>)
+Warning: A notFoundError was encountered on the route with ID "__root__", but a notFoundComponent option was not configured, nor was a router level defaultNotFoundComponent configured. Consider configuring at least one of these to avoid TanStack Router's overly generic defaultNotFoundComponent (<p>Not Found</p>)
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[93mWARN[0m Port 1337 is already in use, trying 1338...
+[93mWARN[0m Port 1337 is already in use, trying 1338...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1337/
+[93mWARN[0m Port 1338 is already in use, trying 1339...
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1338/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1339/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1340/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[93mWARN[0m Port 1340 is already in use, trying 1341...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1341/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[93mWARN[0m Port 1340 is already in use, trying 1341...
+[93mWARN[0m Port 1341 is already in use, trying 1342...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1342/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[0m[1m170 |[0m     },
+[0m[1m170 |[0m     },
+[0m[1m171 |[0m   ) {
+[0m[1m171 |[0m   ) {
+[0m[1m172 |[0m     logPath = path[0m[3m[1m.resolve[0m(logPath)[0m[2m;[0m
+[0m[1m172 |[0m     logPath = path[0m[3m[1m.resolve[0m(logPath)[0m[2m;[0m
+[0m[1m173 |[0m     [0m[35mlet[0m state = ([0m[35mawait[0m readJson(stateFile)) ?? {}[0m[2m;[0m
+[0m[1m174 |[0m 
+[0m[1m173 |[0m     [0m[35mlet[0m state = ([0m[35mawait[0m readJson(stateFile)) ?? {}[0m[2m;[0m
+[0m[1m175 |[0m     [0m[35mlet[0m fh = [0m[35mawait[0m fsp[0m[3m[1m.open[0m(logPath, [0m[32m"r"[0m)[0m[2m;[0m
+[0m[1m174 |[0m 
+                             [31m[1m^[0m
+[0m[1m175 |[0m     [0m[35mlet[0m fh = [0m[35mawait[0m fsp[0m[3m[1m.open[0m(logPath, [0m[32m"r"[0m)[0m[2m;[0m
+[0m[31mENOENT[0m[2m:[0m [1mno such file or directory, open '/Users/muzz/dev/olly/.alchemy/logs/olly-olly-dashboard-muzz.log'[0m
+                             [31m[1m^[0m
+    path[0m[2m:[0m [0m[32m"/Users/muzz/dev/olly/.alchemy/logs/olly-olly-dashboard-muzz.log"[0m[0m[2m,[0m
+[0m[31mENOENT[0m[2m:[0m [1mno such file or directory, open '/Users/muzz/dev/olly/.alchemy/logs/olly-olly-dashboard-muzz.log'[0m
+    path[0m[2m:[0m [0m[32m"/Users/muzz/dev/olly/.alchemy/logs/olly-olly-dashboard-muzz.log"[0m[0m[2m,[0m
+ syscall[0m[2m:[0m [0m[32m"open"[0m[0m[2m,[0m
+ syscall[0m[2m:[0m [0m[32m"open"[0m[0m[2m,[0m
+   errno[0m[2m:[0m [0m[33m-2[0m[0m[2m,[0m
+   errno[0m[2m:[0m [0m[33m-2[0m[0m[2m,[0m
+    code[0m[2m:[0m [32m"ENOENT"[0m
+    code[0m[2m:[0m [32m"ENOENT"[0m
+
+
+[0m      [2mat [0m[0m[2masync <anonymous>[0m[2m ([0m[0m[36mnode:fs/promises[0m[2m:[0m[33m102[0m[2m:[33m56[0m[2m)[0m
+[0m      [2mat [0m[0m[2masync <anonymous>[0m[2m ([0m[0m[36mnode:fs/promises[0m[2m:[0m[33m102[0m[2m:[33m56[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3masync followFilePersisted[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/alchemy@0.91.2+9e2b282d4f6347ee/node_modules/alchemy/src/util/idempotent-spawn.ts[0m[2m:[0m[33m175[0m[2m:[33m24[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3masync followFilePersisted[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/alchemy@0.91.2+9e2b282d4f6347ee/node_modules/alchemy/src/util/idempotent-spawn.ts[0m[2m:[0m[33m175[0m[2m:[33m24[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3masync idempotentSpawn[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/alchemy@0.91.2+9e2b282d4f6347ee/node_modules/alchemy/src/util/idempotent-spawn.ts[0m[2m:[0m[33m70[0m[2m:[33m9[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3masync idempotentSpawn[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/alchemy@0.91.2+9e2b282d4f6347ee/node_modules/alchemy/src/util/idempotent-spawn.ts[0m[2m:[0m[33m70[0m[2m:[33m9[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3masync spawn[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/alchemy@0.91.2+9e2b282d4f6347ee/node_modules/alchemy/src/scope.ts[0m[2m:[0m[33m373[0m[2m:[33m26[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3masync spawn[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/alchemy@0.91.2+9e2b282d4f6347ee/node_modules/alchemy/src/scope.ts[0m[2m:[0m[33m373[0m[2m:[33m26[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3masync Website[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/alchemy@0.91.2+9e2b282d4f6347ee/node_modules/alchemy/src/cloudflare/website.ts[0m[2m:[0m[33m342[0m[2m:[33m23[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3masync Vite[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/alchemy@0.91.2+9e2b282d4f6347ee/node_modules/alchemy/src/cloudflare/vite/vite.ts[0m[2m:[0m[33m53[0m[2m:[33m16[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3masync TanStackStart[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/alchemy@0.91.2+9e2b282d4f6347ee/node_modules/alchemy/src/cloudflare/tanstack-start/tanstack-start.ts[0m[2m:[0m[33m31[0m[2m:[33m16[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3masync Website[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/alchemy@0.91.2+9e2b282d4f6347ee/node_modules/alchemy/src/cloudflare/website.ts[0m[2m:[0m[33m342[0m[2m:[33m23[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3masync Vite[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/alchemy@0.91.2+9e2b282d4f6347ee/node_modules/alchemy/src/cloudflare/vite/vite.ts[0m[2m:[0m[33m53[0m[2m:[33m16[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3masync TanStackStart[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/alchemy@0.91.2+9e2b282d4f6347ee/node_modules/alchemy/src/cloudflare/tanstack-start/tanstack-start.ts[0m[2m:[0m[33m31[0m[2m:[33m16[0m[2m)[0m
+[33mYou are using Node.js 20.9.0. Vite requires Node.js version 20.19+ or 22.12+. Please upgrade your Node.js version.[39m
+[31mfailed to load config from /Users/muzz/dev/olly/apps/dashboard/vite.config.ts[39m
+[31merror when starting dev server:
+TypeError [ERR_IMPORT_ASSERTION_TYPE_MISSING]: Module "file:///Users/muzz/dev/olly/node_modules/.bun/wrangler@4.83.0+76071172b2ca6585/node_modules/wrangler/package.json" needs an import assertion of type "json"
+    at new NodeError (node:internal/errors:406:5)
+    at validateAssertions (node:internal/modules/esm/assert:94:15)
+    at defaultLoad (node:internal/modules/esm/load:122:3)
+    at nextLoad (node:internal/modules/esm/hooks:833:28)
+    at Hooks.load (node:internal/modules/esm/hooks:416:26)
+    at handleMessage (node:internal/modules/esm/worker:168:24)
+    at Immediate.checkForMessages (node:internal/modules/esm/worker:117:28)
+    at process.processImmediate (node:internal/timers:478:21)[39m
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[2J[3J[H[2J[3J[H[1m73 | [0m[0m[35mconst[0m agent = [0m[35mawait[0m Worker([0m[32m"olly-agent"[0m, {
+           [1m[31m[1m^[0m
+[31merror[0m[2m: [0m[1m"agent" has already been declared[0m
+    [2mat [0m[36m/Users/muzz/dev/olly/alchemy.run.ts[0m[2m:[0m[33m73[0m[2m:[0m[33m7[0m
+[2J[3J[H[2J[3J[H[1m73 | [0m[0m[35mconst[0m agent = [0m[35mawait[0m Worker([0m[32m"olly-agent"[0m, {
+
+           [1m[31m[1m^[0m
+[2m38 | [0m[0m[35mconst[0m agent = [0m[35mawait[0m Worker([0m[32m"olly-agent"[0m, {
+[31merror[0m[2m: [0m[1m"agent" has already been declared[0m
+           [34m[34m[1m^[0m
+    [2mat [0m[36m/Users/muzz/dev/olly/alchemy.run.ts[0m[2m:[0m[33m73[0m[2m:[0m[33m7[0m
+[34mnote[0m[2m: [0m[34m"agent" was originally declared here[0m
+
+   [2mat [0m[36m/Users/muzz/dev/olly/alchemy.run.ts[0m[2m:[0m[33m38[0m[2m:[0m[33m7[0m
+[2J[3J[H[2J[3J[H[1m73 | [0m[0m[35mconst[0m agent = [0m[35mawait[0m Worker([0m[32m"olly-agent"[0m, {
+
+[2m38 | [0m[0m[35mconst[0m agent = [0m[35mawait[0m Worker([0m[32m"olly-agent"[0m, {
+           [1m[31m[1m^[0m
+[1m105 | [0m[0m[35mconst[0m dashboard = [0m[35mawait[0m TanStackStart([0m[32m"olly-dashboard"[0m, {
+           [34m[34m[1m^[0m
+            [1m[31m[1m^[0m
+[34mnote[0m[2m: [0m[34m"agent" was originally declared here[0m
+[31merror[0m[2m: [0m[1m"agent" has already been declared[0m
+[31merror[0m[2m: [0m[1m"dashboard" has already been declared[0m
+    [2mat [0m[36m/Users/muzz/dev/olly/alchemy.run.ts[0m[2m:[0m[33m73[0m[2m:[0m[33m7[0m
+   [2mat [0m[36m/Users/muzz/dev/olly/alchemy.run.ts[0m[2m:[0m[33m38[0m[2m:[0m[33m7[0m
+    [2mat [0m[36m/Users/muzz/dev/olly/alchemy.run.ts[0m[2m:[0m[33m105[0m[2m:[0m[33m7[0m
+
+
+
+[1m105 | [0m[0m[35mconst[0m dashboard = [0m[35mawait[0m TanStackStart([0m[32m"olly-dashboard"[0m, {
+[2m95 | [0m[0m[35mconst[0m dashboard = [0m[35mawait[0m TanStackStart([0m[32m"olly-dashboard"[0m, {
+[2m38 | [0m[0m[35mconst[0m agent = [0m[35mawait[0m Worker([0m[32m"olly-agent"[0m, {
+            [1m[31m[1m^[0m
+           [34m[34m[1m^[0m
+           [34m[34m[1m^[0m
+[34mnote[0m[2m: [0m[34m"dashboard" was originally declared here[0m
+[31merror[0m[2m: [0m[1m"dashboard" has already been declared[0m
+   [2mat [0m[36m/Users/muzz/dev/olly/alchemy.run.ts[0m[2m:[0m[33m95[0m[2m:[0m[33m7[0m
+[34mnote[0m[2m: [0m[34m"agent" was originally declared here[0m
+    [2mat [0m[36m/Users/muzz/dev/olly/alchemy.run.ts[0m[2m:[0m[33m105[0m[2m:[0m[33m7[0m
+   [2mat [0m[36m/Users/muzz/dev/olly/alchemy.run.ts[0m[2m:[0m[33m38[0m[2m:[0m[33m7[0m
+
+[2m95 | [0m[0m[35mconst[0m dashboard = [0m[35mawait[0m TanStackStart([0m[32m"olly-dashboard"[0m, {
+
+           [34m[34m[1m^[0m
+[1m105 | [0m[0m[35mconst[0m dashboard = [0m[35mawait[0m TanStackStart([0m[32m"olly-dashboard"[0m, {
+[34mnote[0m[2m: [0m[34m"dashboard" was originally declared here[0m
+            [1m[31m[1m^[0m
+   [2mat [0m[36m/Users/muzz/dev/olly/alchemy.run.ts[0m[2m:[0m[33m95[0m[2m:[0m[33m7[0m
+[31merror[0m[2m: [0m[1m"dashboard" has already been declared[0m
+    [2mat [0m[36m/Users/muzz/dev/olly/alchemy.run.ts[0m[2m:[0m[33m105[0m[2m:[0m[33m7[0m
+
+[2m95 | [0m[0m[35mconst[0m dashboard = [0m[35mawait[0m TanStackStart([0m[32m"olly-dashboard"[0m, {
+           [34m[34m[1m^[0m
+[34mnote[0m[2m: [0m[34m"dashboard" was originally declared here[0m
+   [2mat [0m[36m/Users/muzz/dev/olly/alchemy.run.ts[0m[2m:[0m[33m95[0m[2m:[0m[33m7[0m
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[0m[31m[31mworkerd/server/server.c++:1937: warning: A DurableObjectNamespace in the config referenced the class "WorkspaceDO", but no such Durable Object class is exported from the worker. Please make sure the class name matches, it is exported, and the class extends 'DurableObject'. Attempts to call to this Durable Object class will fail at runtime, but historically this was not a startup-time error. Future versions of workerd may make this a startup-time error.[39m[0m
+[0m[31m[31mworkerd/server/server.c++:1937: warning: A DurableObjectNamespace in the config referenced the class "WorkspaceDO", but no such Durable Object class is exported from the worker. Please make sure the class name matches, it is exported, and the class extends 'DurableObject'. Attempts to call to this Durable Object class will fail at runtime, but historically this was not a startup-time error. Future versions of workerd may make this a startup-time error.[39m[0m
+[0m[31m[31mworkerd/server/server.c++:1937: warning: A DurableObjectNamespace in the config referenced the class "WorkspaceDO", but no such Durable Object class is exported from the worker. Please make sure the class name matches, it is exported, and the class extends 'DurableObject'. Attempts to call to this Durable Object class will fail at runtime, but historically this was not a startup-time error. Future versions of workerd may make this a startup-time error.[39m[0m
+[0m[31m[31mSocket "direct:0:WorkspaceDO" refers to service "core:user:olly-olly-tail-muzz" with a named entrypoint "WorkspaceDO", but "core:user:olly-olly-tail-muzz" has no such named entrypoint.[39m[0m
+[0m[31m[31mSocket "direct:0:WorkspaceDO" refers to service "core:user:olly-olly-tail-muzz" with a named entrypoint "WorkspaceDO", but "core:user:olly-olly-tail-muzz" has no such named entrypoint.[39m[0m
+[0m[31m[31mSocket "direct:0:WorkspaceDO" refers to service "core:user:olly-olly-tail-muzz" with a named entrypoint "WorkspaceDO", but "core:user:olly-olly-tail-muzz" has no such named entrypoint.[39m[0m
+[0m[31m[91mERROR[0m Scope failed olly/muzz/olly-tail[0m
+[0m[31m[91mERROR[0m Scope failed olly/muzz/olly-tail[0m
+[93mWARN[0m Scope is in error, skipping finalize
+[0m[31m[91mERROR[0m Scope failed olly/muzz/olly-tail[0m
+[0m[31m[91mERROR[0m Scope failed olly/muzz[0m
+[93mWARN[0m Scope is in error, skipping finalize
+[93mWARN[0m Scope is in error, skipping finalize
+[0m[31m[91mERROR[0m Scope failed olly/muzz[0m
+[0m[31m[91mERROR[0m Scope failed olly/muzz[0m
+[0m[1m82569 |[0m       [0m[33mthis[0m.#workerOpts[0m[3m[1m.flatMap[0m((w2) => w2.core.name ?? []),
+[0m[1m82570 |[0m       [0m[33mthis[0m.#disposeController.signal
+[0m[1m82571 |[0m     )[0m[2m;[0m
+[0m[1m82572 |[0m     [0m[35mif[0m ([0m[33mthis[0m.#disposeController.signal.aborted) [0m[35mreturn[0m[0m[2m;[0m
+[0m[1m82573 |[0m     [0m[35mif[0m (maybeSocketPorts === [0m[35mvoid[0m [0m[33m0[0m) {
+[0m[1m82574 |[0m       [0m[35mthrow[0m [0m[35mnew[0m [0m[1mMiniflareCoreError[0m(
+                        [31m[1m^[0m
+[0m[31mMiniflareCoreError [ERR_RUNTIME_FAILURE][0m[2m:[0m [1mThe Workers runtime failed to start. There is likely additional logging output above.[0m
+ cause[0m[2m:[0m [0m[2mundefined[0m[0m[2m,[0m
+  code[0m[2m:[0m [32m"ERR_RUNTIME_FAILURE"[0m
+
+[0m      [2mat [0m#assembleAndUpdateConfig[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/miniflare@4.20260310.0/node_modules/miniflare/dist/src/index.js[0m[2m:[0m[33m82574[0m[2m:[33m17[0m[2m)[0m
+[0m      [2mat [0mprocessTicksAndRejections[2m ([0m[0m[36mnative[0m[2m:[0m[33m7[0m[2m:[33m39[0m[2m)[0m
+[0m[1m82569 |[0m       [0m[33mthis[0m.#workerOpts[0m[3m[1m.flatMap[0m((w2) => w2.core.name ?? []),
+[0m[1m82570 |[0m       [0m[33mthis[0m.#disposeController.signal
+[0m[1m82571 |[0m     )[0m[2m;[0m
+[0m[1m82572 |[0m     [0m[35mif[0m ([0m[33mthis[0m.#disposeController.signal.aborted) [0m[35mreturn[0m[0m[2m;[0m
+[0m[1m82573 |[0m     [0m[35mif[0m (maybeSocketPorts === [0m[35mvoid[0m [0m[33m0[0m) {
+[0m[1m82574 |[0m       [0m[35mthrow[0m [0m[35mnew[0m [0m[1mMiniflareCoreError[0m(
+                        [31m[1m^[0m
+[0m[31mMiniflareCoreError [ERR_RUNTIME_FAILURE][0m[2m:[0m [1mThe Workers runtime failed to start. There is likely additional logging output above.[0m
+ cause[0m[2m:[0m [0m[2mundefined[0m[0m[2m,[0m
+  code[0m[2m:[0m [32m"ERR_RUNTIME_FAILURE"[0m
+
+[0m      [2mat [0m#assembleAndUpdateConfig[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/miniflare@4.20260310.0/node_modules/miniflare/dist/src/index.js[0m[2m:[0m[33m82574[0m[2m:[33m17[0m[2m)[0m
+[0m      [2mat [0mprocessTicksAndRejections[2m ([0m[0m[36mnative[0m[2m:[0m[33m7[0m[2m:[33m39[0m[2m)[0m
+[0m[1m82569 |[0m       [0m[33mthis[0m.#workerOpts[0m[3m[1m.flatMap[0m((w2) => w2.core.name ?? []),
+[0m[1m82570 |[0m       [0m[33mthis[0m.#disposeController.signal
+[0m[1m82571 |[0m     )[0m[2m;[0m
+[0m[1m82572 |[0m     [0m[35mif[0m ([0m[33mthis[0m.#disposeController.signal.aborted) [0m[35mreturn[0m[0m[2m;[0m
+[0m[1m82573 |[0m     [0m[35mif[0m (maybeSocketPorts === [0m[35mvoid[0m [0m[33m0[0m) {
+[0m[1m82574 |[0m       [0m[35mthrow[0m [0m[35mnew[0m [0m[1mMiniflareCoreError[0m(
+                        [31m[1m^[0m
+[0m[31mMiniflareCoreError [ERR_RUNTIME_FAILURE][0m[2m:[0m [1mThe Workers runtime failed to start. There is likely additional logging output above.[0m
+ cause[0m[2m:[0m [0m[2mundefined[0m[0m[2m,[0m
+  code[0m[2m:[0m [32m"ERR_RUNTIME_FAILURE"[0m
+
+[0m      [2mat [0m#assembleAndUpdateConfig[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/miniflare@4.20260310.0/node_modules/miniflare/dist/src/index.js[0m[2m:[0m[33m82574[0m[2m:[33m17[0m[2m)[0m
+[0m      [2mat [0mprocessTicksAndRejections[2m ([0m[0m[36mnative[0m[2m:[0m[33m7[0m[2m:[33m39[0m[2m)[0m
+[96m[dev]       [0m[90molly-tail[0m Rebuilding
+[96m[dev]       [0m[90molly-tail[0m Rebuilding
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[0m[31m[31mworkerd/server/server.c++:1937: warning: A DurableObjectNamespace in the config referenced the class "WorkspaceDO", but no such Durable Object class is exported from the worker. Please make sure the class name matches, it is exported, and the class extends 'DurableObject'. Attempts to call to this Durable Object class will fail at runtime, but historically this was not a startup-time error. Future versions of workerd may make this a startup-time error.[39m[0m
+[0m[31m[31mSocket "direct:0:WorkspaceDO" refers to service "core:user:olly-olly-tail-muzz" with a named entrypoint "WorkspaceDO", but "core:user:olly-olly-tail-muzz" has no such named entrypoint.[39m[0m
+[0m[31m[91mERROR[0m Scope failed olly/muzz/olly-tail[0m
+[93mWARN[0m Scope is in error, skipping finalize
+[0m[31m[91mERROR[0m Scope failed olly/muzz[0m
+[0m[1m82569 |[0m       [0m[33mthis[0m.#workerOpts[0m[3m[1m.flatMap[0m((w2) => w2.core.name ?? []),
+[0m[1m82570 |[0m       [0m[33mthis[0m.#disposeController.signal
+[0m[1m82571 |[0m     )[0m[2m;[0m
+[0m[1m82572 |[0m     [0m[35mif[0m ([0m[33mthis[0m.#disposeController.signal.aborted) [0m[35mreturn[0m[0m[2m;[0m
+[0m[1m82573 |[0m     [0m[35mif[0m (maybeSocketPorts === [0m[35mvoid[0m [0m[33m0[0m) {
+[0m[1m82574 |[0m       [0m[35mthrow[0m [0m[35mnew[0m [0m[1mMiniflareCoreError[0m(
+                        [31m[1m^[0m
+[0m[31mMiniflareCoreError [ERR_RUNTIME_FAILURE][0m[2m:[0m [1mThe Workers runtime failed to start. There is likely additional logging output above.[0m
+ cause[0m[2m:[0m [0m[2mundefined[0m[0m[2m,[0m
+  code[0m[2m:[0m [32m"ERR_RUNTIME_FAILURE"[0m
+
+[0m      [2mat [0m#assembleAndUpdateConfig[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/miniflare@4.20260310.0/node_modules/miniflare/dist/src/index.js[0m[2m:[0m[33m82574[0m[2m:[33m17[0m[2m)[0m
+[0m      [2mat [0mprocessTicksAndRejections[2m ([0m[0m[36mnative[0m[2m:[0m[33m7[0m[2m:[33m39[0m[2m)[0m
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[0m[31m[31mworkerd/server/server.c++:1937: warning: A DurableObjectNamespace in the config referenced the class "WorkspaceDO", but no such Durable Object class is exported from the worker. Please make sure the class name matches, it is exported, and the class extends 'DurableObject'. Attempts to call to this Durable Object class will fail at runtime, but historically this was not a startup-time error. Future versions of workerd may make this a startup-time error.[39m[0m
+[0m[31m[31mSocket "direct:0:WorkspaceDO" refers to service "core:user:olly-olly-tail-muzz" with a named entrypoint "WorkspaceDO", but "core:user:olly-olly-tail-muzz" has no such named entrypoint.[39m[0m
+[0m[31m[91mERROR[0m Scope failed olly/muzz/olly-tail[0m
+[93mWARN[0m Scope is in error, skipping finalize
+[0m[31m[91mERROR[0m Scope failed olly/muzz[0m
+[0m[1m82569 |[0m       [0m[33mthis[0m.#workerOpts[0m[3m[1m.flatMap[0m((w2) => w2.core.name ?? []),
+[0m[1m82570 |[0m       [0m[33mthis[0m.#disposeController.signal
+[0m[1m82571 |[0m     )[0m[2m;[0m
+[0m[1m82572 |[0m     [0m[35mif[0m ([0m[33mthis[0m.#disposeController.signal.aborted) [0m[35mreturn[0m[0m[2m;[0m
+[0m[1m82573 |[0m     [0m[35mif[0m (maybeSocketPorts === [0m[35mvoid[0m [0m[33m0[0m) {
+[0m[1m82574 |[0m       [0m[35mthrow[0m [0m[35mnew[0m [0m[1mMiniflareCoreError[0m(
+                        [31m[1m^[0m
+[0m[31mMiniflareCoreError [ERR_RUNTIME_FAILURE][0m[2m:[0m [1mThe Workers runtime failed to start. There is likely additional logging output above.[0m
+ cause[0m[2m:[0m [0m[2mundefined[0m[0m[2m,[0m
+  code[0m[2m:[0m [32m"ERR_RUNTIME_FAILURE"[0m
+
+[0m      [2mat [0m#assembleAndUpdateConfig[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mnode_modules/.bun/miniflare@4.20260310.0/node_modules/miniflare/dist/src/index.js[0m[2m:[0m[33m82574[0m[2m:[33m17[0m[2m)[0m
+[0m      [2mat [0mprocessTicksAndRejections[2m ([0m[0m[36mnative[0m[2m:[0m[33m7[0m[2m:[33m39[0m[2m)[0m
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[93mWARN[0m Port 1337 is already in use, trying 1338...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1337/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1338/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[93mWARN[0m Port 1337 is already in use, trying 1338...
+[93mWARN[0m Port 1338 is already in use, trying 1339...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1339/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1340/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[93mWARN[0m Port 1340 is already in use, trying 1341...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1341/
+[93mWARN[0m Port 1340 is already in use, trying 1341...
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[93mWARN[0m Port 1341 is already in use, trying 1342...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1342/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[33mYou are using Node.js 20.9.0. Vite requires Node.js version 20.19+ or 22.12+. Please upgrade your Node.js version.[39m
+[31mfailed to load config from /Users/muzz/dev/olly/apps/dashboard/vite.config.ts[39m
+[31merror when starting dev server:
+TypeError [ERR_IMPORT_ASSERTION_TYPE_MISSING]: Module "file:///Users/muzz/dev/olly/node_modules/.bun/wrangler@4.83.0+76071172b2ca6585/node_modules/wrangler/package.json" needs an import assertion of type "json"
+    at new NodeError (node:internal/errors:406:5)
+    at validateAssertions (node:internal/modules/esm/assert:94:15)
+    at defaultLoad (node:internal/modules/esm/load:122:3)
+    at nextLoad (node:internal/modules/esm/hooks:833:28)
+    at Hooks.load (node:internal/modules/esm/hooks:416:26)
+    at handleMessage (node:internal/modules/esm/worker:168:24)
+    at Immediate.checkForMessages (node:internal/modules/esm/worker:117:28)
+    at process.processImmediate (node:internal/timers:478:21)[39m
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[2mDefault inspector port 9229 not available, using 9230 instead
+[22m
+[2mDefault inspector port 9229 not available, using 9230 instead
+[22m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 127.0.0.1:9230
+[90m    at Server.setupListenHandle [as _listen2] (node:net:1940:16)[39m
+[90m    at listenInCluster (node:net:1997:12)[39m
+[90m    at node:net:2206:7[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m
+Emitted 'error' event on WebSocketServer instance at:
+[90m    at Server.emit (node:events:520:35)[39m
+[90m    at Server.emit (node:domain:489:12)[39m
+[90m    at emitErrorNT (node:net:1976:8)[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m {
+  code: [32m'EADDRINUSE'[39m,
+  errno: [33m-48[39m,
+  syscall: [32m'listen'[39m,
+  address: [32m'127.0.0.1'[39m,
+  port: [33m9230[39m
+}
+
+Node.js v24.9.0
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[2mDefault inspector port 9229 not available, using 9230 instead
+[22m
+[2mDefault inspector port 9229 not available, using 9230 instead
+[22m
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 127.0.0.1:9230
+[90m    at Server.setupListenHandle [as _listen2] (node:net:1940:16)[39m
+[90m    at listenInCluster (node:net:1997:12)[39m
+[90m    at node:net:2206:7[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m
+Emitted 'error' event on WebSocketServer instance at:
+[90m    at Server.emit (node:events:520:35)[39m
+[90m    at Server.emit (node:domain:489:12)[39m
+[90m    at emitErrorNT (node:net:1976:8)[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m {
+  code: [32m'EADDRINUSE'[39m,
+  errno: [33m-48[39m,
+  syscall: [32m'listen'[39m,
+  address: [32m'127.0.0.1'[39m,
+  port: [33m9230[39m
+}
+
+Node.js v24.9.0
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+
+  [32m[1mVITE[22m v7.3.2[39m  [2mready in [0m[1m1772[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5175[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://localhost:[1m5175[22m[2m/__debug[39m[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1me + enter[22m[2m to open local explorer[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mb + enter[22m[2m to list configured Cloudflare bindings[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+
+  [32m[1mVITE[22m v7.3.2[39m  [2mready in [0m[1m1772[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5175[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://localhost:[1m5175[22m[2m/__debug[39m[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1me + enter[22m[2m to open local explorer[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mb + enter[22m[2m to list configured Cloudflare bindings[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T10:14:07.029Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1340/","agentUrl":"http://localhost:1337/","dashboardUrl":"http://localhost:5175/"}
+
+  URLs
+    tail      http://localhost:1340/
+    agent     http://localhost:1337/
+    dashboard http://localhost:5175/
+
+{"ts":"2026-04-19T10:14:07.083Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1342/","agentUrl":"http://localhost:1339/","dashboardUrl":"http://localhost:5175/"}
+
+  URLs
+    tail      http://localhost:1342/
+    agent     http://localhost:1339/
+    dashboard http://localhost:5175/
+
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1337/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1340/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[2mDefault inspector port 9229 not available, using 9230 instead
+[22m
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+
+  [32m[1mVITE[22m v7.3.2[39m  [2mready in [0m[1m1733[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5175[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://localhost:[1m5175[22m[2m/__debug[39m[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1me + enter[22m[2m to open local explorer[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mb + enter[22m[2m to list configured Cloudflare bindings[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T10:14:30.674Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1340/","agentUrl":"http://localhost:1337/","dashboardUrl":"http://localhost:5175/"}
+
+  URLs
+    tail      http://localhost:1340/
+    agent     http://localhost:1337/
+    dashboard http://localhost:5175/
+
+[2J[3J[H[2J[3J[H[0m[1m41 |[0m 
+[0m[1m42 |[0m   [0m[35mif[0m (missing.length === [0m[33m0[0m) {
+[0m[1m43 |[0m     [0m[35mreturn[0m[0m[2m;[0m
+[0m[1m44 |[0m   }
+[0m[1m45 |[0m 
+[0m[1m46 |[0m   [0m[35mthrow[0m [0m[35mnew[0m [0m[1mError[0m(
+[2J[3J[H[2J[3J[H[0m[1m41 |[0m 
+                 [31m[1m^[0m
+[0m[31merror[0m[2m:[0m [1mMissing required env vars: DASHBOARD_WS_SHARED_SECRET. See SPEC.md "Secrets".[0m
+[0m[1m42 |[0m   [0m[35mif[0m (missing.length === [0m[33m0[0m) {
+[0m      [2mat [0m[0m[1m[3mvalidateRootEnv[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mlib/env.ts[0m[2m:[0m[33m46[0m[2m:[33m13[0m[2m)[0m
+[0m[1m43 |[0m     [0m[35mreturn[0m[0m[2m;[0m
+[0m[1m44 |[0m   }
+[0m[1m45 |[0m 
+[0m[1m46 |[0m   [0m[35mthrow[0m [0m[35mnew[0m [0m[1mError[0m(
+[0m      [2mat [0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36malchemy.run.ts[0m[2m:[0m[33m11[0m[2m:[33m1[0m
+                 [31m[1m^[0m
+[0m[31merror[0m[2m:[0m [1mMissing required env vars: DASHBOARD_WS_SHARED_SECRET. See SPEC.md "Secrets".[0m
+[0m      [2mat [0m[0m[1m[3mvalidateRootEnv[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mlib/env.ts[0m[2m:[0m[33m46[0m[2m:[33m13[0m[2m)[0m
+[0m      [2mat [0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36malchemy.run.ts[0m[2m:[0m[33m11[0m[2m:[33m1[0m
+[2J[3J[H[2J[3J[H[0m[1m41 |[0m 
+[0m[1m42 |[0m   [0m[35mif[0m (missing.length === [0m[33m0[0m) {
+[0m[1m43 |[0m     [0m[35mreturn[0m[0m[2m;[0m
+[0m[1m44 |[0m   }
+[0m[1m45 |[0m 
+[0m[1m46 |[0m   [0m[35mthrow[0m [0m[35mnew[0m [0m[1mError[0m(
+                 [31m[1m^[0m
+[0m[31merror[0m[2m:[0m [1mMissing required env vars: DASHBOARD_WS_SHARED_SECRET. See SPEC.md "Secrets".[0m
+[0m      [2mat [0m[0m[1m[3mvalidateRootEnv[0m[2m ([0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36mlib/env.ts[0m[2m:[0m[33m46[0m[2m:[33m13[0m[2m)[0m
+[0m      [2mat [0m[0m[36m[2m/Users/muzz/dev/olly/[0m[36malchemy.run.ts[0m[2m:[0m[33m11[0m[2m:[33m1[0m
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[93mWARN[0m Port 1337 is already in use, trying 1338...
+[93mWARN[0m Port 1337 is already in use, trying 1338...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1337/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[93mWARN[0m Port 1338 is already in use, trying 1339...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1338/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1339/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1340/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[93mWARN[0m Port 1340 is already in use, trying 1341...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1341/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[93mWARN[0m Port 1340 is already in use, trying 1341...
+[93mWARN[0m Port 1341 is already in use, trying 1342...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1342/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[2mDefault inspector port 9229 not available, using 9232 instead
+[22m
+[2mDefault inspector port 9229 not available, using 9232 instead
+[22m
+[2mDefault inspector port 9229 not available, using 9232 instead
+[22m
+node:events:486
+      throw er; // Unhandled 'error' event
+node:events:486
+      ^
+      throw er; // Unhandled 'error' event
+
+      ^
+Error: listen EADDRINUSE: address already in use 127.0.0.1:9232
+
+[90m    at Server.setupListenHandle [as _listen2] (node:net:1940:16)[39m
+Error: listen EADDRINUSE: address already in use 127.0.0.1:9232
+[90m    at Server.setupListenHandle [as _listen2] (node:net:1940:16)[39m
+[90m    at listenInCluster (node:net:1997:12)[39m
+[90m    at listenInCluster (node:net:1997:12)[39m
+node:events:486
+[90m    at node:net:2206:7[39m
+[90m    at node:net:2206:7[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m
+      throw er; // Unhandled 'error' event
+Emitted 'error' event on WebSocketServer instance at:
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m
+      ^
+Emitted 'error' event on WebSocketServer instance at:
+[90m    at Server.emit (node:events:520:35)[39m
+[90m    at Server.emit (node:events:520:35)[39m
+
+[90m    at Server.emit (node:domain:489:12)[39m
+[90m    at Server.emit (node:domain:489:12)[39m
+[90m    at emitErrorNT (node:net:1976:8)[39m
+[90m    at emitErrorNT (node:net:1976:8)[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m {
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m {
+  code: [32m'EADDRINUSE'[39m,
+  code: [32m'EADDRINUSE'[39m,
+  errno: [33m-48[39m,
+  errno: [33m-48[39m,
+  syscall: [32m'listen'[39m,
+  syscall: [32m'listen'[39m,
+  address: [32m'127.0.0.1'[39m,
+Error: listen EADDRINUSE: address already in use 127.0.0.1:9232
+  address: [32m'127.0.0.1'[39m,
+  port: [33m9232[39m
+  port: [33m9232[39m
+}
+[90m    at Server.setupListenHandle [as _listen2] (node:net:1940:16)[39m
+}
+[90m    at listenInCluster (node:net:1997:12)[39m
+
+[90m    at node:net:2206:7[39m
+
+Node.js v24.9.0
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m
+Emitted 'error' event on WebSocketServer instance at:
+[90m    at Server.emit (node:events:520:35)[39m
+Node.js v24.9.0
+[90m    at Server.emit (node:domain:489:12)[39m
+[90m    at emitErrorNT (node:net:1976:8)[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m {
+  code: [32m'EADDRINUSE'[39m,
+  errno: [33m-48[39m,
+  syscall: [32m'listen'[39m,
+  address: [32m'127.0.0.1'[39m,
+  port: [33m9232[39m
+}
+
+Node.js v24.9.0
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[0m[31merror[0m[2m:[0m "[1mvite[0m" exited with code 1
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[0m[31m[31mReceived a FetchEvent but we lack a handler for FetchEvents. Did you remember to export a fetch() function?[39m[0m
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 102b4dc9b 10038eebf 102afe7e3 102afa5cf 102afaecb 10030d4a7 10031300f 102b50787 102b50a9b 102b4f4e3 102b4f2b7 1003008af 18cafab97[39m[0m
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 102b4dc9b 10038eebf 102afe7e3 102afa5cf 102afaecb 10030d4a7 10031300f 102b50787 102b50a9b 102b4f4e3 102b4f2b7 1003008af 18cafab97[39m[0m
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 102b4dc9b 10038eebf 102afe7e3 102afa5cf 102afaecb 10030d4a7 10031300f 102b50787 102b50a9b 102b4f4e3 102b4f2b7 1003008af 18cafab97[39m[0m
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 102b4dc9b 10038eebf 102afe7e3 102afa5cf 102afaecb 10030d4a7 10031300f 102b50787 102b50a9b 102b4f4e3 102b4f2b7 1003008af 18cafab97[39m[0m
+[96m[dev]       [0m[90molly-agent[0m Updated
+[0m[31m[31mReceived a FetchEvent but we lack a handler for FetchEvents. Did you remember to export a fetch() function?[39m[0m
+[90mExiting...[39m
+[90mExiting...[39m
+[90mExiting...[39m
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1337/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1338/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[2mDefault inspector port 9229 not available, using 9230 instead
+[22m
+
+  [32m[1mVITE[22m v7.3.2[39m  [2mready in [0m[1m1703[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://localhost:[1m5173[22m[2m/__debug[39m[22m
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T10:35:22.014Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1338/","agentUrl":"http://localhost:1337/","dashboardUrl":"http://localhost:5173/"}
+
+  URLs
+    tail      http://localhost:1338/
+    agent     http://localhost:1337/
+    dashboard http://localhost:5173/
+
+[0m[31m[31mReceived a FetchEvent but we lack a handler for FetchEvents. Did you remember to export a fetch() function?[39m[0m
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1339/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1340/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T10:38:16.193Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1340/","agentUrl":"http://localhost:1339/","dashboardUrl":"http://localhost:5173/"}
+
+  URLs
+    tail      http://localhost:1340/
+    agent     http://localhost:1339/
+    dashboard http://localhost:5173/
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Updated
+[2m4:13:55 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/index.tsx?tsr-split=component[22m
+[2m4:13:55 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/index.tsx?tsr-split=component[22m
+[2m4:13:55 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[2m4:13:55 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[vite] hot updated: virtual:cloudflare/worker-entry
+[vite] hot updated: virtual:cloudflare/worker-entry
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 1054bdc9b 102cfeebf 10546e7e3 10546a5cf 10546aecb 102c7d4a7 102c8300f 1054c0787 1054c0a9b 1054bf4e3 1054bf2b7 102c708af 18cafab97[39m[0m
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 1054bdc9b 102cfeebf 10546e7e3 10546a5cf 10546aecb 102c7d4a7 102c8300f 1054c0787 1054c0a9b 1054bf4e3 1054bf2b7 102c708af 18cafab97[39m[0m
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 1054bdc9b 102cfeebf 10546e7e3 10546a5cf 10546aecb 102c7d4a7 102c8300f 1054c0787 1054c0a9b 1054bf4e3 1054bf2b7 102c708af 18cafab97[39m[0m
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 1054bdc9b 102cfeebf 10546e7e3 10546a5cf 10546aecb 102c7d4a7 102c8300f 1054c0787 1054c0a9b 1054bf4e3 1054bf2b7 102c708af 18cafab97[39m[0m
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[2m4:14:40 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/index.tsx?tsr-split=component[22m
+[2m4:14:40 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/index.tsx?tsr-split=component[22m
+[2m4:14:40 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[2m4:14:40 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[vite] hot updated: virtual:cloudflare/worker-entry
+[vite] hot updated: virtual:cloudflare/worker-entry
+[2m4:14:43 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/index.tsx?tsr-split=component[22m
+[2m4:14:43 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[2m4:14:43 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/index.tsx?tsr-split=component[22m
+[2m4:14:43 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[vite] hot updated: virtual:cloudflare/worker-entry
+[vite] hot updated: virtual:cloudflare/worker-entry
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+Warning: A notFoundError was encountered on the route with ID "__root__", but a notFoundComponent option was not configured, nor was a router level defaultNotFoundComponent configured. Consider configuring at least one of these to avoid TanStack Router's overly generic defaultNotFoundComponent (<p>Not Found</p>)
+Warning: A notFoundError was encountered on the route with ID "__root__", but a notFoundComponent option was not configured, nor was a router level defaultNotFoundComponent configured. Consider configuring at least one of these to avoid TanStack Router's overly generic defaultNotFoundComponent (<p>Not Found</p>)
+[2m4:14:48 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/index.tsx?tsr-split=component[22m
+[2m4:14:48 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/index.tsx?tsr-split=component[22m
+[2m4:14:48 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[2m4:14:48 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[vite] hot updated: virtual:cloudflare/worker-entry
+[vite] hot updated: virtual:cloudflare/worker-entry
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[2m4:15:14 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/index.tsx?tsr-split=component[22m
+[2m4:15:14 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/index.tsx?tsr-split=component[22m
+[2m4:15:14 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[2m4:15:14 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[vite] hot updated: virtual:cloudflare/worker-entry
+[vite] hot updated: virtual:cloudflare/worker-entry
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+App: olly
+Phase: up
+Phase: up
+Stage: muzz
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1338/
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1337/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1340/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1339/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T10:45:42.765Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1340/","agentUrl":"http://localhost:1337/","dashboardUrl":"http://localhost:5173/"}
+
+  URLs
+    tail      http://localhost:1340/
+    agent     http://localhost:1337/
+    dashboard http://localhost:5173/
+
+{"ts":"2026-04-19T10:45:42.797Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1339/","agentUrl":"http://localhost:1338/","dashboardUrl":"http://localhost:5173/"}
+
+  URLs
+    tail      http://localhost:1339/
+    agent     http://localhost:1338/
+    dashboard http://localhost:5173/
+
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[2J[3J[H[2J[3J[H[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1337/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[93mWARN[0m Port 1337 is already in use, trying 1338...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1338/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[93mWARN[0m Port 1339 is already in use, trying 1340...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1339/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1340/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T10:45:47.196Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1340/","agentUrl":"http://localhost:1337/","dashboardUrl":"http://localhost:5173/"}
+
+  URLs
+    tail      http://localhost:1340/
+    agent     http://localhost:1337/
+    dashboard http://localhost:5173/
+
+{"ts":"2026-04-19T10:45:47.234Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1339/","agentUrl":"http://localhost:1338/","dashboardUrl":"http://localhost:5173/"}
+
+  URLs
+    tail      http://localhost:1339/
+    agent     http://localhost:1338/
+    dashboard http://localhost:5173/
+
+[2m4:15:50 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/components/state-machine.tsx[22m
+[2m4:15:50 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/components/state-machine.tsx[22m
+[2m4:15:50 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[2m4:15:50 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[vite] hot updated: virtual:cloudflare/worker-entry
+[vite] hot updated: virtual:cloudflare/worker-entry
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[2m4:17:17 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/components/event-stream.tsx[22m
+[2m4:17:17 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[2m4:17:17 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/components/event-stream.tsx[22m
+[2m4:17:17 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[vite] hot updated: virtual:cloudflare/worker-entry
+[vite] hot updated: virtual:cloudflare/worker-entry
+[2m4:17:43 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/components/header.tsx[22m
+[2m4:17:43 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[2m4:17:43 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/components/header.tsx[22m
+[2m4:17:43 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[vite] hot updated: virtual:cloudflare/worker-entry
+[vite] hot updated: virtual:cloudflare/worker-entry
+[2m4:18:04 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/index.tsx, /src/routes/index.tsx?tsr-split=component[22m
+[2m4:18:04 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[2m4:18:04 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/index.tsx, /src/routes/index.tsx?tsr-split=component[22m
+[2m4:18:04 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[vite] hot updated: virtual:cloudflare/worker-entry
+[vite] hot updated: virtual:cloudflare/worker-entry
+[2m4:18:15 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/__root.tsx[22m
+[2m4:18:15 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[2m4:18:15 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/routes/__root.tsx[22m
+[2m4:18:15 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[vite] hot updated: virtual:cloudflare/worker-entry
+[vite] hot updated: virtual:cloudflare/worker-entry
+Warning: A notFoundError was encountered on the route with ID "__root__", but a notFoundComponent option was not configured, nor was a router level defaultNotFoundComponent configured. Consider configuring at least one of these to avoid TanStack Router's overly generic defaultNotFoundComponent (<p>Not Found</p>)
+Warning: A notFoundError was encountered on the route with ID "__root__", but a notFoundComponent option was not configured, nor was a router level defaultNotFoundComponent configured. Consider configuring at least one of these to avoid TanStack Router's overly generic defaultNotFoundComponent (<p>Not Found</p>)
+[2m4:19:13 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/components/state-machine.tsx[22m
+[2m4:19:13 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/components/state-machine.tsx[22m
+[2m4:19:13 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[2m4:19:13 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mhmr update [39m[2m/@id/virtual:cloudflare/worker-entry[22m
+[vite] hot updated: virtual:cloudflare/worker-entry
+[vite] hot updated: virtual:cloudflare/worker-entry
+[0m[31m[31mReceived a FetchEvent but we lack a handler for FetchEvents. Did you remember to export a fetch() function?[39m[0m
+[0m[31m[31mReceived a FetchEvent but we lack a handler for FetchEvents. Did you remember to export a fetch() function?[39m[0m
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[35m[creating]  [0m[90molly-dashboard-build[0m Creating Resource...
+vite v7.3.2 building client environment for production...
+transforming...
+✓ 1865 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/client/.assetsignore                 0.02 kB
+dist/client/assets/styles-BR-UZLfw.css   37.74 kB │ gzip:   7.02 kB
+dist/client/assets/index-CXo-S2fn.js     68.98 kB │ gzip:  21.36 kB
+dist/client/assets/index-BgDA28AO.js    321.03 kB │ gzip: 102.51 kB
+✓ built in 1.96s
+vite v7.3.2 building ssr environment for production...
+transforming...
+✓ 1913 modules transformed.
+rendering chunks...
+dist/server/wrangler.json                                            1.53 kB
+dist/server/.vite/manifest.json                                      2.22 kB
+dist/server/assets/styles-BR-UZLfw.css                              37.74 kB
+dist/server/assets/start-HYkvq4Ni.js                                 0.06 kB
+dist/server/assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js    0.14 kB
+dist/server/index.js                                                 0.19 kB
+dist/server/assets/_tanstack-start-manifest_v-nIulqwTb.js            0.44 kB
+dist/server/assets/router-CwRbH917.js                              105.20 kB
+dist/server/assets/index-CUIS08dH.js                               176.96 kB
+dist/server/assets/worker-entry-CRWzLQ_k.js                        721.57 kB
+✓ built in 1.46s
+[92m[created]   [0m[90molly-dashboard-build[0m Created Resource
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T11:00:46.022Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"https://olly-olly-tail-muzz.muzzz.workers.dev","agentUrl":"https://olly-olly-agent-muzz.muzzz.workers.dev","dashboardUrl":"https://olly-olly-dashboard-muzz.muzzz.workers.dev"}
+
+  URLs
+    tail      https://olly-olly-tail-muzz.muzzz.workers.dev
+    agent     https://olly-olly-agent-muzz.muzzz.workers.dev
+    dashboard https://olly-olly-dashboard-muzz.muzzz.workers.dev
+

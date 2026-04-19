@@ -26,10 +26,12 @@ const chDatabase = process.env.CLICKHOUSE_DATABASE ?? "default";
 const githubPat = alchemy.secret(process.env.GITHUB_PAT);
 const githubOwner = process.env.GITHUB_REPO_OWNER ?? "muzzlol";
 const githubRepo = process.env.GITHUB_REPO_NAME ?? "olly-demo-app";
+const githubBranch = process.env.GITHUB_REPO_DEFAULT_BRANCH ?? "main";
 const wsSecret = alchemy.secret(
   process.env.DASHBOARD_WS_SHARED_SECRET ?? "dev-secret",
 );
 const demoMode = process.env.DEMO_MODE ?? "1";
+const demoSkipClone = process.env.DEMO_SKIP_CLONE ?? "";
 
 // -- Durable Object namespace (agent workspace, SQLite-backed) --
 const workspace = DurableObjectNamespace("workspace", {
@@ -54,8 +56,10 @@ const agent = await Worker("olly-agent", {
     GITHUB_PAT: githubPat,
     GITHUB_REPO_OWNER: githubOwner,
     GITHUB_REPO_NAME: githubRepo,
+    GITHUB_REPO_DEFAULT_BRANCH: githubBranch,
     DASHBOARD_WS_SHARED_SECRET: wsSecret,
     DEMO_MODE: demoMode,
+    DEMO_SKIP_CLONE: demoSkipClone,
   },
 });
 
