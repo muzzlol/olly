@@ -1,17 +1,27 @@
 {
   "name": "olly",
-  "module": "index.ts",
   "type": "module",
   "private": true,
+  "workspaces": ["apps/tail", "apps/agent", "apps/dashboard"],
+  "scripts": {
+    "ch:bootstrap": "bun --env-file=.env run scripts/bootstrap-ch.ts",
+    "ch:query": "bun --env-file=.env run scripts/query-ch.ts",
+    "dev": "bash -lc 'set -o pipefail; source \"$HOME/.nvm/nvm.sh\" >/dev/null 2>&1 && nvm use >/dev/null; bunx alchemy dev alchemy.run.ts 2>&1 | bun run scripts/split-logs.ts'",
+    "deploy": "bash -lc 'set -o pipefail; source \"$HOME/.nvm/nvm.sh\" >/dev/null 2>&1 && nvm use >/dev/null; bun run alchemy.run.ts 2>&1 | bun run scripts/split-logs.ts'",
+    "destroy": "bash -lc 'set -o pipefail; source \"$HOME/.nvm/nvm.sh\" >/dev/null 2>&1 && nvm use >/dev/null; DESTROY=true bun run alchemy.run.ts 2>&1 | bun run scripts/split-logs.ts'",
+    "demo:plant-bug": "bun --env-file=.env run scripts/plant-bug.ts",
+    "demo:reset-bug": "bun --env-file=.env run scripts/reset-bug.ts",
+    "incident:reset": "bun --env-file=.env run scripts/reset-incident.ts",
+    "smoke": "bun --env-file=.env run scripts/smoke.ts"
+  },
   "devDependencies": {
+    "@clickhouse/client-web": "^1.18.2",
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "ai": "^6.0.168",
-    "ai-sdk-provider-opencode-sdk": "^3.0.2",
     "alchemy": "^0.91.2"
   }
 }
