@@ -1,19 +1,8 @@
 # olly
 
+the always on, on-call engineer.
+
 this you with olly
 
 ![this you with olly](bedge-pepe-sleep.gif)
 
-To install dependencies:
-
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.3.13. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
