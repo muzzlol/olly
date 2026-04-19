@@ -119,3 +119,14 @@ clears the in-memory DO state back to `IDLE`. Requires
 | `bun run demo:plant-bug`   | mutate a file in the demo repo |
 | `bun run demo:reset-bug`   | revert said mutation |
 | `bun run incident:reset`   | reset the workspace DO to IDLE |
+
+
+
+1. Open dashboard: https://olly-olly-dashboard-muzz.muzzz.workers.dev
+2. Run: bun run demo:plant-bug
+3. Watch state machine: TRIAGE → GATHER → HYPOTHESIZE → PATCH → PR
+4. Click the PR link, merge it on GitHub
+5. Wait ~30s for MONITOR to verify → incident resolved
+Reset for next run:
+bun run demo:reset-bug
+bun run incident:reset

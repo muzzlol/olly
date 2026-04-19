@@ -1328,3 +1328,410 @@ dist/server/assets/worker-entry-CRWzLQ_k.js                        721.57 kB
     agent     https://olly-olly-agent-muzz.muzzz.workers.dev
     dashboard https://olly-olly-dashboard-muzz.muzzz.workers.dev
 
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 1074d1c9b 104d12ebf 1074827e3 10747e5cf 10747eecb 104c914a7 104c9700f 1074d4787 1074d4a9b 1074d34e3 1074d32b7 104c848af 18cafab97[39m[0m
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 1074d1c9b 104d12ebf 1074827e3 10747e5cf 10747eecb 104c914a7 104c9700f 1074d4787 1074d4a9b 1074d34e3 1074d32b7 104c848af 18cafab97[39m[0m
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 1074d1c9b 104d12ebf 1074827e3 10747e5cf 10747eecb 104c914a7 104c9700f 1074d4787 1074d4a9b 1074d34e3 1074d32b7 104c848af 18cafab97[39m[0m
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 1074d1c9b 104d12ebf 1074827e3 10747e5cf 10747eecb 104c914a7 104c9700f 1074d4787 1074d4a9b 1074d34e3 1074d32b7 104c848af 18cafab97[39m[0m
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 1048d5c9b 102116ebf 1048867e3 1048825cf 104882ecb 1020954a7 10209b00f 1048d8787 1048d8a9b 1048d74e3 1048d72b7 1020888af 18cafab97[39m[0m
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 1048d5c9b 102116ebf 1048867e3 1048825cf 104882ecb 1020954a7 10209b00f 1048d8787 1048d8a9b 1048d74e3 1048d72b7 1020888af 18cafab97[39m[0m
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 1048d5c9b 102116ebf 1048867e3 1048825cf 104882ecb 1020954a7 10209b00f 1048d8787 1048d8a9b 1048d74e3 1048d72b7 1020888af 18cafab97[39m[0m
+[0m[31m[31mworkerd/server/server.c++:5877: error: e = kj/io.c++:381: disconnected: miniposix::write(fd, pos, kj::min(size, WRITE_CLAMP_SIZE)): Broken pipe; fd = 3[39m[0m
+[0m[31m[31mstack: 1048d5c9b 102116ebf 1048867e3 1048825cf 104882ecb 1020954a7 10209b00f 1048d8787 1048d8a9b 1048d74e3 1048d72b7 1020888af 18cafab97[39m[0m
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:19:
+      18 │ import * as z from "zod";
+         ╵                    ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:19:
+      18 │ import * as z from "zod";
+         ╵                    ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:19:
+      18 │ import * as z from "zod";
+         ╵                    ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:19:
+      18 │ import * as z from "zod";
+         ╵                    ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:19:
+      18 │ import * as z from "zod";
+         ╵                    ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:19:
+      18 │ import * as z from "zod";
+         ╵                    ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+✘ [ERROR] Could not resolve "zod"
+✘ [ERROR] Could not resolve "zod"
+
+
+    apps/agent/src/states/hypothesize.ts:18:19:
+    apps/agent/src/states/hypothesize.ts:18:19:
+      18 │ import * as z from "zod";
+      18 │ import * as z from "zod";
+         ╵                    ~~~~~
+         ╵                    ~~~~~
+
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:18:
+      18 │ import { z } from "zod";
+         ╵                   ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:18:
+      18 │ import { z } from "zod";
+         ╵                   ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:18:
+      18 │ import { z } from "zod";
+         ╵                   ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:18:
+      18 │ import { z } from "zod";
+         ╵                   ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:18:
+      18 │ import { z } from "zod";
+         ╵                   ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:18:
+      18 │ import { z } from "zod";
+         ╵                   ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:18:
+      18 │ import { z } from "zod";
+         ╵                   ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+✘ [ERROR] Could not resolve "zod"
+
+    apps/agent/src/states/hypothesize.ts:18:18:
+      18 │ import { z } from "zod";
+         ╵                   ~~~~~
+
+  You can mark the path "zod" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[90mExiting...[39m
+[90mExiting...[39m
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[93mWARN[0m Development mode is in beta. Please report any issues to https://github.com/alchemy-run/alchemy/issues.
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[96m[dev]       [0m[90molly-agent[0m Ready at http://localhost:1337/
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[96m[dev]       [0m[90molly-tail[0m Ready at http://localhost:1338/
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[2m5:01:58 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m Re-optimizing dependencies because lockfile has changed
+[2m5:01:59 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because lockfile has changed
+
+  [32m[1mVITE[22m v7.3.2[39m  [2mready in [0m[1m1975[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://localhost:[1m5173[22m[2m/__debug[39m[22m
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T11:32:00.079Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"http://localhost:1338/","agentUrl":"http://localhost:1337/","dashboardUrl":"http://localhost:5173/"}
+
+  URLs
+    tail      http://localhost:1338/
+    agent     http://localhost:1337/
+    dashboard http://localhost:5173/
+
+[91m[deleting]  [0m[90molly-dashboard-build[0m Deleting Resource...
+[92m[deleted]   [0m[90molly-dashboard-build[0m Deleted Resource
+[0m[31m[31mReceived a FetchEvent but we lack a handler for FetchEvents. Did you remember to export a fetch() function?[39m[0m
+[0m[31m[31m{"ts":"2026-04-19T11:32:45.232Z","service":"olly-agent","level":"error","event":"workspace.patch_failed","component":"workspace-do","error":{"name":"Error","message":"patch: no known bug pattern found in /src/lib/price.ts; refusing to write blind","stack":"Error: patch: no known bug pattern found in /src/lib/price.ts; refusing to write blind\n    at WorkspaceDO.runPatch (file:///Users/muzz/dev/olly/.alchemy/out/olly-olly-agent-muzz/worker.js:76967:49)\n    at async WorkspaceDO.runIncident (file:///Users/muzz/dev/olly/.alchemy/out/olly-olly-agent-muzz/worker.js:76696:20)"},"incidentId":"b9be9291-f96d-41f2-87fe-e3a4f4af0992"}[39m[0m
+[0m[31m[31m{"ts":"2026-04-19T11:33:11.492Z","service":"olly-agent","level":"error","event":"workspace.patch_failed","component":"workspace-do","error":{"name":"Error","message":"patch: no known bug pattern found in /src/lib/price.ts; refusing to write blind","stack":"Error: patch: no known bug pattern found in /src/lib/price.ts; refusing to write blind\n    at WorkspaceDO.runPatch (file:///Users/muzz/dev/olly/.alchemy/out/olly-olly-agent-muzz/worker.js:76967:49)\n    at async WorkspaceDO.runIncident (file:///Users/muzz/dev/olly/.alchemy/out/olly-olly-agent-muzz/worker.js:76696:20)"},"incidentId":"800f0549-3f11-4b9f-8703-23b882fb2939"}[39m[0m
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[96m[dev]       [0m[90molly-agent[0m Rebuilding
+[96m[dev]       [0m[90molly-agent[0m Updated
+[90mExiting...[39m
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[35m[creating]  [0m[90molly-dashboard-build[0m Creating Resource...
+vite v7.3.2 building client environment for production...
+transforming...
+✓ 1865 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/client/.assetsignore                 0.02 kB
+dist/client/assets/styles-BR-UZLfw.css   37.74 kB │ gzip:   7.02 kB
+dist/client/assets/index-CXo-S2fn.js     68.98 kB │ gzip:  21.36 kB
+dist/client/assets/index-BgDA28AO.js    321.03 kB │ gzip: 102.51 kB
+✓ built in 1.22s
+vite v7.3.2 building ssr environment for production...
+transforming...
+✓ 1913 modules transformed.
+rendering chunks...
+dist/server/wrangler.json                                            1.53 kB
+dist/server/.vite/manifest.json                                      2.22 kB
+dist/server/assets/styles-BR-UZLfw.css                              37.74 kB
+dist/server/assets/start-HYkvq4Ni.js                                 0.06 kB
+dist/server/assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js    0.14 kB
+dist/server/index.js                                                 0.19 kB
+dist/server/assets/_tanstack-start-manifest_v-nIulqwTb.js            0.44 kB
+dist/server/assets/router-CwRbH917.js                              105.20 kB
+dist/server/assets/index-CUIS08dH.js                               176.96 kB
+dist/server/assets/worker-entry-CRWzLQ_k.js                        721.57 kB
+✓ built in 987ms
+[92m[created]   [0m[90molly-dashboard-build[0m Created Resource
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T11:42:11.404Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"https://olly-olly-tail-muzz.muzzz.workers.dev","agentUrl":"https://olly-olly-agent-muzz.muzzz.workers.dev","dashboardUrl":"https://olly-olly-dashboard-muzz.muzzz.workers.dev"}
+
+  URLs
+    tail      https://olly-olly-tail-muzz.muzzz.workers.dev
+    agent     https://olly-olly-agent-muzz.muzzz.workers.dev
+    dashboard https://olly-olly-dashboard-muzz.muzzz.workers.dev
+
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[35m[updating]  [0m[90molly-dashboard-build[0m Updating Resource...
+vite v7.3.2 building client environment for production...
+transforming...
+✓ 1865 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/client/.assetsignore                 0.02 kB
+dist/client/assets/styles-BR-UZLfw.css   37.74 kB │ gzip:   7.02 kB
+dist/client/assets/index-CAvjkeN7.js     69.20 kB │ gzip:  21.45 kB
+dist/client/assets/index-CE81PX8t.js    321.03 kB │ gzip: 102.51 kB
+✓ built in 1.13s
+vite v7.3.2 building ssr environment for production...
+transforming...
+✓ 1913 modules transformed.
+rendering chunks...
+dist/server/wrangler.json                                            1.53 kB
+dist/server/.vite/manifest.json                                      2.22 kB
+dist/server/assets/styles-BR-UZLfw.css                              37.74 kB
+dist/server/assets/start-HYkvq4Ni.js                                 0.06 kB
+dist/server/assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js    0.14 kB
+dist/server/index.js                                                 0.19 kB
+dist/server/assets/_tanstack-start-manifest_v-Db4BKGI9.js            0.44 kB
+dist/server/assets/router-Dx0jlJPo.js                              105.20 kB
+dist/server/assets/index-Dq-41_AC.js                               177.37 kB
+dist/server/assets/worker-entry-DwjROjRA.js                        721.57 kB
+✓ built in 1.00s
+[92m[updated]   [0m[90molly-dashboard-build[0m Updated Resource
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[35m[updating]  [0m[90molly-dashboard-build[0m Updating Resource...
+vite v7.3.2 building client environment for production...
+transforming...
+✓ 1864 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/client/.assetsignore                 0.02 kB
+dist/client/assets/styles-Rk4Co1LH.css   37.87 kB │ gzip:   7.06 kB
+dist/client/assets/index-BRp8iVW6.js     68.30 kB │ gzip:  21.17 kB
+dist/client/assets/index-IVZLPpv2.js    321.03 kB │ gzip: 102.51 kB
+✓ built in 1.14s
+vite v7.3.2 building ssr environment for production...
+transforming...
+✓ 1912 modules transformed.
+rendering chunks...
+dist/server/wrangler.json                                            1.53 kB
+dist/server/.vite/manifest.json                                      2.22 kB
+dist/server/assets/styles-Rk4Co1LH.css                              37.87 kB
+dist/server/assets/start-HYkvq4Ni.js                                 0.06 kB
+dist/server/assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js    0.14 kB
+dist/server/index.js                                                 0.19 kB
+dist/server/assets/_tanstack-start-manifest_v-mrdg2kBS.js            0.44 kB
+dist/server/assets/router-Bw9X5hwI.js                              105.20 kB
+dist/server/assets/index-DsVFDgfn.js                               175.90 kB
+dist/server/assets/worker-entry-DD4f9Sd9.js                        721.58 kB
+✓ built in 933ms
+[92m[updated]   [0m[90molly-dashboard-build[0m Updated Resource
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T11:53:19.715Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"https://olly-olly-tail-muzz.muzzz.workers.dev","agentUrl":"https://olly-olly-agent-muzz.muzzz.workers.dev","dashboardUrl":"https://olly-olly-dashboard-muzz.muzzz.workers.dev"}
+
+  URLs
+    tail      https://olly-olly-tail-muzz.muzzz.workers.dev
+    agent     https://olly-olly-agent-muzz.muzzz.workers.dev
+    dashboard https://olly-olly-dashboard-muzz.muzzz.workers.dev
+
+[96mAlchemy[0m (v0.91.2)
+App: olly
+Phase: up
+Stage: muzz
+[35m[updating]  [0m[90molly-agent[0m Updating Resource...
+[92m[updated]   [0m[90molly-agent[0m Updated Resource
+[35m[updating]  [0m[90molly-tail[0m Updating Resource...
+[92m[updated]   [0m[90molly-tail[0m Updated Resource
+[35m[updating]  [0m[90molly-dashboard-build[0m Updating Resource...
+vite v7.3.2 building client environment for production...
+transforming...
+✓ 1864 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/client/.assetsignore                 0.02 kB
+dist/client/assets/styles-Rk4Co1LH.css   37.87 kB │ gzip:   7.06 kB
+dist/client/assets/index-BRp8iVW6.js     68.30 kB │ gzip:  21.17 kB
+dist/client/assets/index-IVZLPpv2.js    321.03 kB │ gzip: 102.51 kB
+✓ built in 1.07s
+vite v7.3.2 building ssr environment for production...
+transforming...
+✓ 1912 modules transformed.
+rendering chunks...
+dist/server/wrangler.json                                            1.53 kB
+dist/server/.vite/manifest.json                                      2.22 kB
+dist/server/assets/styles-Rk4Co1LH.css                              37.87 kB
+dist/server/assets/start-HYkvq4Ni.js                                 0.06 kB
+dist/server/assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js    0.14 kB
+dist/server/index.js                                                 0.19 kB
+dist/server/assets/_tanstack-start-manifest_v-mrdg2kBS.js            0.44 kB
+dist/server/assets/router-Bw9X5hwI.js                              105.20 kB
+dist/server/assets/index-DsVFDgfn.js                               175.90 kB
+dist/server/assets/worker-entry-DD4f9Sd9.js                        721.58 kB
+✓ built in 898ms
+[92m[updated]   [0m[90molly-dashboard-build[0m Updated Resource
+[35m[updating]  [0m[90molly-dashboard[0m Updating Resource...
+[92m[updated]   [0m[90molly-dashboard[0m Updated Resource
+{"ts":"2026-04-19T12:07:35.229Z","service":"alchemy","level":"info","event":"deploy.resources_ready","phase":"up","tailUrl":"https://olly-olly-tail-muzz.muzzz.workers.dev","agentUrl":"https://olly-olly-agent-muzz.muzzz.workers.dev","dashboardUrl":"https://olly-olly-dashboard-muzz.muzzz.workers.dev"}
+
+  URLs
+    tail      https://olly-olly-tail-muzz.muzzz.workers.dev
+    agent     https://olly-olly-agent-muzz.muzzz.workers.dev
+    dashboard https://olly-olly-dashboard-muzz.muzzz.workers.dev
+

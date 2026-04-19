@@ -33,7 +33,12 @@ import {
   type SignalMsg,
   type StateMsg,
 } from "../../../lib/ws-events.ts";
+import { createExecutor } from "./codemode";
 import { wait, withTimeout } from "./lib/demo";
+import { createZenModel } from "./model";
+import { hypothesize, type HypothesizeResult } from "./states/hypothesize";
+import { patch } from "./states/patch";
+import { openPr } from "./states/pr";
 import { triage } from "./states/triage";
 import {
   createClickHouseTools,
@@ -468,50 +473,15 @@ export class WorkspaceDO extends DurableObject<Env> {
     }
 
     if (state === "HYPOTHESIZE") {
-      await traceTool(
-        this.emitter,
-        incidentId,
-        "state",
-        "plan",
-        {
-          turnCap: this.demo.hypothesizeTurnCap,
-          wallTimeSec: Math.round(this.demo.hypothesizeWallMs / 1000),
-        },
-        () => Promise.resolve({ stub: true }),
-      );
-      // TODO: drive codemode executor + Zen model. Cap at 8 turns / 60s.
-      await wait(stepMs);
-      return true;
+      return this.runHypothesize(incidentId, signal);
     }
 
     if (state === "PATCH") {
-      await traceTool(
-        this.emitter,
-        incidentId,
-        "state",
-        "applyEditPlan",
-        { stub: true },
-        () => Promise.resolve({ stub: true }),
-      );
-      // TODO: emit `diff` message once the patch is real.
-      await wait(stepMs);
-      return true;
+      return this.runPatch(incidentId);
     }
 
     if (state === "PR") {
-      await traceTool(
-        this.emitter,
-        incidentId,
-        "git",
-        "push",
-        {
-          branch: `olly/${incidentId.slice(0, 8)}`,
-        },
-        () => Promise.resolve({ stub: true }),
-      );
-      // TODO: emit `pr_url` after real PR creation.
-      await wait(stepMs);
-      return true;
+      return this.runPr(incidentId, signal);
     }
 
     if (state === "MONITOR") {
@@ -705,6 +675,178 @@ export class WorkspaceDO extends DurableObject<Env> {
     );
   }
 
+  private readGather(incidentId: string, key: string): string | null {
+    const rows = this.sql
+      .exec<{ value: string } & Record<string, SqlStorageValue>>(
+        `SELECT value FROM gather_context WHERE incident_id = ? AND key = ?`,
+        incidentId,
+        key,
+      )
+      .toArray();
+
+    return rows[0]?.value ?? null;
+  }
+
+  // ---------- PR ----------
+
+  private async runPr(
+    incidentId: string,
+    signal: SignalEvent,
+  ): Promise<boolean> {
+    const targetFile = this.readGather(incidentId, "target_file") ?? "";
+    const hypothesis = this.readGather(incidentId, "hypothesis") ?? "";
+    const patchText = this.readGather(incidentId, "patch") ?? "";
+
+    if (targetFile === "" || patchText === "") {
+      this.escalate(
+        incidentId,
+        "pr_no_patch",
+        new Error("pr: missing target_file or patch in gather_context"),
+      );
+      return false;
+    }
+
+    const result = await openPr({
+      baseBranch: this.env.GITHUB_REPO_DEFAULT_BRANCH,
+      deployId: signal.deployId,
+      emit: this.emitter,
+      errorClass: signal.errorClass,
+      githubToken: this.env.GITHUB_PAT,
+      hypothesis,
+      incidentId,
+      isDemo: this.demo.isDemo,
+      owner: this.env.GITHUB_REPO_OWNER,
+      patch: patchText,
+      repo: this.env.GITHUB_REPO_NAME,
+      signature: signal.signature,
+      targetFile,
+      workspace: this.workspace,
+    }).catch((err: unknown) => ({
+      error: err instanceof Error ? err.message : String(err),
+    }));
+
+    if ("error" in result) {
+      this.escalate(incidentId, "pr_failed", new Error(result.error));
+      return false;
+    }
+
+    this.recordGather(incidentId, "pr_url", result.url);
+    this.recordGather(incidentId, "pr_number", String(result.number));
+    if (result.usedFallback) {
+      this.recordGather(
+        incidentId,
+        "pr_fallback_reason",
+        result.fallbackReason ?? "unknown",
+      );
+    }
+
+    return true;
+  }
+
+  // ---------- PATCH ----------
+
+  private async runPatch(incidentId: string): Promise<boolean> {
+    const targetFile = this.readGather(incidentId, "target_file") ?? "";
+
+    if (targetFile === "") {
+      this.escalate(
+        incidentId,
+        "patch_no_target",
+        new Error("patch: no target_file recorded"),
+      );
+      return false;
+    }
+
+    const result = await patch({
+      emit: this.emitter,
+      incidentId,
+      isDemo: this.demo.isDemo,
+      targetFile,
+      workspace: this.workspace,
+    }).catch((err: unknown) => ({
+      error: err instanceof Error ? err.message : String(err),
+    }));
+
+    if ("error" in result) {
+      this.escalate(incidentId, "patch_failed", new Error(result.error));
+      return false;
+    }
+
+    this.recordGather(incidentId, "patch", result.patch);
+    return true;
+  }
+
+  // ---------- HYPOTHESIZE ----------
+
+  private async runHypothesize(
+    incidentId: string,
+    signal: SignalEvent,
+  ): Promise<boolean> {
+    const stackFrame = this.readGather(incidentId, "stack_frame") ?? "";
+    const stackFile = this.readGather(incidentId, "stack_file") ?? "";
+    const recentErrorsCount = toInt(
+      this.readGather(incidentId, "recent_errors_count"),
+    );
+    const recentDeploysCount = toInt(
+      this.readGather(incidentId, "recent_deploys_count"),
+    );
+
+    const executor = createExecutor(this.env, this.workspace, {
+      modelTimeoutMs: this.demo.modelTimeoutMs,
+      sandboxTimeoutMs: this.demo.sandboxTimeoutMs,
+    });
+    const model = createZenModel(this.env);
+
+    const job = hypothesize({
+      clickhouse: this.clickhouseTools(),
+      context: {
+        errorClass: signal.errorClass,
+        message: signal.message,
+        recentDeploysCount,
+        recentErrorsCount,
+        service: signal.service,
+        signature: signal.signature,
+        stackFile,
+        stackFrame,
+      },
+      emit: this.emitter,
+      executor,
+      githubToken: this.env.GITHUB_PAT,
+      incidentId,
+      isDemo: this.demo.isDemo,
+      model,
+      modelTimeoutMs: this.demo.modelTimeoutMs,
+      turnCap: this.demo.hypothesizeTurnCap,
+      wallMs: this.demo.hypothesizeWallMs,
+      workspace: this.workspace,
+    });
+
+    const result: HypothesizeResult | { error: string } = await withTimeout(
+      job,
+      this.demo.hypothesizeWallMs,
+      "hypothesize",
+    ).catch((err: unknown) => ({
+      error: err instanceof Error ? err.message : String(err),
+    }));
+
+    if ("error" in result) {
+      this.escalate(incidentId, "hypothesize_failed", new Error(result.error));
+      return false;
+    }
+
+    this.recordGather(incidentId, "hypothesis", result.hypothesis);
+    this.recordGather(incidentId, "target_file", result.targetFile);
+    if (result.usedFallback) {
+      this.recordGather(
+        incidentId,
+        "hypothesize_fallback_reason",
+        result.fallbackReason ?? "unknown",
+      );
+    }
+
+    return true;
+  }
+
   private escalate(
     incidentId: string,
     event: string,
@@ -802,23 +944,52 @@ export class WorkspaceDO extends DurableObject<Env> {
 
     const tools = this.clickhouseTools();
 
+    // Reconstruct a match filter from the stored signature. The signature
+    // is `v1|stack|<service>|<errorClass>|<frame>` or
+    // `v1|message|<service>|<route>|<status>|<msg-prefix>`. The most
+    // reliable thing across both is the errorClass or the message prefix,
+    // so we fall back to the raw `runSql` path when the structured parts
+    // aren't usable.
+    const windowSec = pending.windowSec;
+    const service = pending.service;
+
     const result = await traceTool(
       this.emitter,
       pending.incidentId,
       "clickhouse",
-      "getErrorRate",
-      { signature: pending.signature, windowSec: pending.windowSec },
-      () => tools.getErrorRate(pending.signature, pending.windowSec),
+      "monitor.count_matching",
+      { service, signature: pending.signature, windowSec },
+      () => countMatching(tools, service, pending.signature, windowSec),
     ).catch((err: unknown) => {
       log.error("workspace.monitor_query_failed", {
         error: toError(err),
         incidentId: pending.incidentId,
       });
-      return { count: -1, signature: pending.signature, windowSec: pending.windowSec };
+      return { count: -1 };
     });
 
-    const resolution: IncidentResolvedMsg["resolution"] =
-      result.count <= 0 ? "fixed" : "escalated";
+    const still = result.count > 0;
+
+    if (still) {
+      const stillLog: LogMsg = {
+        event: "monitor.still_erroring",
+        fields: {
+          count: result.count,
+          service,
+          signature: pending.signature,
+          windowSec,
+        },
+        incidentId: pending.incidentId,
+        level: "warn",
+        ts: new Date().toISOString(),
+        type: "log",
+      };
+      this.emit(stillLog);
+    }
+
+    const resolution: IncidentResolvedMsg["resolution"] = still
+      ? "escalated"
+      : "fixed";
 
     this.sql.exec(
       `UPDATE incidents
@@ -849,6 +1020,7 @@ export class WorkspaceDO extends DurableObject<Env> {
     log.info("workspace.monitor_resolved", {
       incidentId: pending.incidentId,
       resolution,
+      count: result.count,
     });
   }
 
@@ -938,6 +1110,61 @@ function toError(reason: unknown): Error {
     return reason;
   }
   return new Error(String(reason));
+}
+
+async function countMatching(
+  tools: ClickHouseTools,
+  service: string,
+  signature: string,
+  windowSec: number,
+): Promise<{ count: number }> {
+  // Parse the signature. Format:
+  //   v1|stack|<service>|<errorClass>|<frame>
+  //   v1|message|<service>|<route>|<status>|<prefix>
+  const parts = signature.split("|");
+  const kind = parts[1] ?? "";
+  const matchSource = kind === "stack" ? parts[4] ?? "" : parts[5] ?? "";
+  const errorClass = kind === "stack" ? parts[3] ?? "" : "";
+
+  // Build a read-only SELECT that looks for the same fingerprint.
+  const clauses = [
+    `workspace = 'default'`,
+    `service = ${sqlLit(service)}`,
+    `timestamp >= now64(3) - INTERVAL ${Math.trunc(windowSec)} SECOND`,
+    `(level IN ('error', 'fatal') OR status_code >= 500)`,
+  ];
+
+  if (errorClass !== "") {
+    clauses.push(`lower(message) LIKE ${sqlLit(`%${errorClass}%`)}`);
+  }
+
+  if (matchSource !== "") {
+    clauses.push(
+      `(lower(stack_trace) LIKE ${sqlLit(`%${matchSource}%`)} OR lower(message) LIKE ${sqlLit(`%${matchSource}%`)})`,
+    );
+  }
+
+  const query = `SELECT count() AS c FROM logs WHERE ${clauses.join(" AND ")}`;
+  const rows = await tools.runSql(query);
+  const first = rows[0] as { c?: string | number } | undefined;
+  const count = first?.c !== undefined ? Number(first.c) : 0;
+
+  return { count: Number.isFinite(count) ? count : 0 };
+}
+
+function sqlLit(value: string): string {
+  return `'${value.replaceAll("'", "''")}'`;
+}
+
+function toInt(value: string | null): number {
+  if (value === null) {
+    return 0;
+  }
+  const n = Number(value);
+  if (!Number.isFinite(n)) {
+    return 0;
+  }
+  return Math.trunc(n);
 }
 
 // Re-export for worker.ts compile-time side-effects.

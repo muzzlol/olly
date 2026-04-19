@@ -1,4 +1,4 @@
-import { ChevronDown, GitPullRequest, Play, Rocket } from "lucide-react";
+import { ChevronDown, Loader2, Play, Zap } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
@@ -13,9 +13,9 @@ interface Props {
   latencyMs: number | null;
   reconnectInMs: number;
   mockActive: boolean;
+  triggering: boolean;
   onReplay: (scenario: MockScenario) => void;
   onTriggerDemo: () => void;
-  onInstallApp: () => void;
 }
 
 const SCENARIO_LABELS: Record<MockScenario, string> = {
@@ -35,9 +35,9 @@ export function Header({
   latencyMs,
   reconnectInMs,
   mockActive,
+  triggering,
   onReplay,
   onTriggerDemo,
-  onInstallApp,
 }: Props) {
   return (
     <header className="flex h-14 items-center gap-3 border-b border-border bg-card/40 px-5">
@@ -67,15 +67,18 @@ export function Header({
 
       <div className="ml-auto flex items-center gap-2">
         <ReplayMenu onSelect={onReplay} />
-        <Button size="sm" variant="secondary" onClick={onTriggerDemo}>
-          <Rocket className="h-3.5 w-3.5" />
-          Trigger demo
-          <span className="ml-1 text-[10px] uppercase opacity-70">(stub)</span>
-        </Button>
-        <Button size="sm" onClick={onInstallApp}>
-          <GitPullRequest className="h-3.5 w-3.5" />
-          Install GitHub App
-          <span className="ml-1 text-[10px] uppercase opacity-70">(demo stub)</span>
+        <Button
+          size="sm"
+          onClick={onTriggerDemo}
+          disabled={triggering}
+          title="Post a live signal to the agent worker"
+        >
+          {triggering ? (
+            <Loader2 className="h-3.5 w-3.5 animate-spin" />
+          ) : (
+            <Zap className="h-3.5 w-3.5" />
+          )}
+          {triggering ? "Triggering…" : "Trigger incident"}
         </Button>
       </div>
     </header>

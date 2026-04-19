@@ -4,21 +4,18 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Header } from "@/components/header";
 import { StateMachine } from "@/components/state-machine";
 import { EventStream } from "@/components/event-stream";
-import { StubModal } from "@/components/stub-modal";
 import { useIncidentStore } from "@/lib/incident-store";
-import { useAgentSocket } from "@/lib/ws";
+import { useAgentSocket, getAgentHttpBase } from "@/lib/ws";
 import { replayMockStream, type MockScenario } from "@/lib/mock-stream";
 
 export const Route = createFileRoute("/")({
   component: Dashboard,
 });
 
-type StubKind = "trigger" | "install" | null;
-
 function Dashboard() {
   const [mockActive, setMockActive] = useState(false);
   const { store, ingest, reset } = useIncidentStore(mockActive);
-  const [stub, setStub] = useState<StubKind>(null);
+  const [triggering, setTriggering] = useState(false);
   const cancelRef = useRef<(() => void) | null>(null);
 
   // Live WS is disabled while mock replay is running so the two streams do
@@ -34,6 +31,44 @@ function Dashboard() {
     },
     [ingest, reset],
   );
+
+  const onTriggerDemo = useCallback(async () => {
+    if (triggering) return;
+    setTriggering(true);
+    const base = getAgentHttpBase();
+    const payload = {
+      workspace: "default",
+      events: [
+        {
+          signature: `website|TypeError|dashboard_${Date.now()}`,
+          service: "website",
+          level: "error",
+          message: "Cannot read properties of undefined (reading amount)",
+          stackTrace:
+            "TypeError: Cannot read properties of undefined (reading amount)\n    at computeTotal (/src/lib/price.ts:5:12)",
+          statusCode: 500,
+          route: "/boom",
+          traceId: `dash-${Date.now()}`,
+          timestamp: new Date().toISOString(),
+          deployId: "dashboard",
+          errorClass: "TypeError",
+          signatureSource: "stack",
+        },
+      ],
+    };
+    const res = await fetch(`${base}/signal`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(payload),
+    }).catch((err: unknown) => {
+      console.error("trigger failed", err);
+      return null;
+    });
+    if (!res || !res.ok) {
+      console.error("signal rejected", res?.status);
+    }
+    setTriggering(false);
+  }, [triggering]);
 
   // Auto-clear the mock flag once the scripted timeline is exhausted. We use
   // the `incident_resolved` event as the terminal marker.
@@ -64,9 +99,9 @@ function Dashboard() {
         latencyMs={ws.latencyMs}
         reconnectInMs={ws.reconnectInMs}
         mockActive={mockActive}
+        triggering={triggering}
         onReplay={onReplay}
-        onTriggerDemo={() => setStub("trigger")}
-        onInstallApp={() => setStub("install")}
+        onTriggerDemo={onTriggerDemo}
       />
 
       <main className="grid flex-1 grid-cols-[45%_1fr] overflow-hidden">
@@ -82,21 +117,6 @@ function Dashboard() {
           <EventStream entries={store.entries} banner={store.banner} />
         </section>
       </main>
-
-      {stub === "trigger" && (
-        <StubModal
-          title="Trigger demo"
-          body="The demo pipeline isn't wired to the dashboard yet. This button will plant the bug commit and let the agent pick it up once the backend is online."
-          onClose={() => setStub(null)}
-        />
-      )}
-      {stub === "install" && (
-        <StubModal
-          title="Install GitHub App"
-          body="GitHub App install is a demo stub for the MVP. We authenticate via a fine-grained PAT on the server — there is no real install flow yet."
-          onClose={() => setStub(null)}
-        />
-      )}
     </div>
   );
 }

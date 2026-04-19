@@ -12,6 +12,7 @@
     "demo:plant-bug": "bun --env-file=.env run scripts/plant-bug.ts",
     "demo:reset-bug": "bun --env-file=.env run scripts/reset-bug.ts",
     "incident:reset": "bun --env-file=.env run scripts/reset-incident.ts",
+    "rerun:prod": "bun --env-file=.env run scripts/rerun-prod.ts",
     "smoke": "bun --env-file=.env run scripts/smoke.ts"
   },
   "devDependencies": {

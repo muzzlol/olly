@@ -24,9 +24,21 @@ export interface Env {
   DEMO_SKIP_CLONE?: string;
 }
 
+const CORS_HEADERS = {
+  "access-control-allow-origin": "*",
+  "access-control-allow-methods": "POST, GET, OPTIONS",
+  "access-control-allow-headers": "content-type, x-dashboard-shared-secret",
+  "access-control-max-age": "600",
+};
+
 const handler: ExportedHandler<Env> = {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    // CORS preflight for dashboard fetches.
+    if (request.method === "OPTIONS") {
+      return new Response(null, { status: 204, headers: CORS_HEADERS });
+    }
 
     // WebSocket upgrade for dashboard connections
     if (url.pathname === "/ws") {
@@ -39,7 +51,10 @@ const handler: ExportedHandler<Env> = {
     if (url.pathname === "/signal" && request.method === "POST") {
       const id = env.WORKSPACE.idFromName("default");
       const stub = env.WORKSPACE.get(id);
-      return stub.fetch(request);
+      const upstream = await stub.fetch(request);
+      const headers = new Headers(upstream.headers);
+      for (const [k, v] of Object.entries(CORS_HEADERS)) headers.set(k, v);
+      return new Response(upstream.body, { status: upstream.status, headers });
     }
 
     if (url.pathname === "/internal/reset-incident" && request.method === "POST") {

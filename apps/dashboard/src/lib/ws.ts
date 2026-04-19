@@ -9,6 +9,31 @@ const PING_INTERVAL_MS = 20_000;
 const MAX_BACKOFF_MS = 5_000;
 const LATENCY_WINDOW = 3;
 
+/**
+ * Derive the agent WS URL at runtime:
+ *  1. `VITE_AGENT_WS_URL` (build-time override) wins if set.
+ *  2. In prod (not localhost), swap the dashboard hostname (`*-dashboard-*`)
+ *     for the agent hostname (`*-agent-*`) and use wss://. Same CF account,
+ *     same stage, predictable naming.
+ *  3. Fallback to local dev default.
+ */
+function deriveProdAgentUrl(): string | null {
+  if (typeof window === "undefined") return null;
+  const host = window.location.hostname;
+  if (host === "localhost" || host === "127.0.0.1") return null;
+  if (!host.includes("-dashboard-")) return null;
+  const agentHost = host.replace("-dashboard-", "-agent-");
+  return `wss://${agentHost}/ws`;
+}
+
+/** HTTP base for the agent worker (used by REST calls like /signal). */
+export function getAgentHttpBase(): string {
+  const ws = resolveUrl();
+  if (ws.startsWith("wss://")) return "https://" + ws.slice("wss://".length).replace(/\/ws$/, "");
+  if (ws.startsWith("ws://")) return "http://" + ws.slice("ws://".length).replace(/\/ws$/, "");
+  return "http://localhost:1337";
+}
+
 export type WsStatus = "connecting" | "open" | "closed";
 
 export interface WsHookResult {
@@ -23,6 +48,8 @@ export interface WsHookResult {
 function resolveUrl(): string {
   const env = import.meta.env.VITE_AGENT_WS_URL;
   if (typeof env === "string" && env.length > 0) return env;
+  const derived = deriveProdAgentUrl();
+  if (derived) return derived;
   return DEFAULT_URL;
 }
 
