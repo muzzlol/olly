@@ -19,3 +19,4 @@
 - Avoid `let` statements.
 - Prefer single-word variable names where possible.
 
+add reusable scripts in scripts/ that can improve the dev process

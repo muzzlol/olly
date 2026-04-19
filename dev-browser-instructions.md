@@ -19,7 +19,7 @@ Options:
       --ignore-https-errors  Ignore HTTPS certificate errors for daemon-managed Chromium
       --timeout <SECONDS>    Maximum script execution time in seconds [default: 30]
   -h, --help                 Print help (see more with '--help')
-you can see app logs in logs/ 
+you can see app logs in `logs/` - the package scripts tee stdout/stderr there while the app runs.
 
 Continue browser work with:
 

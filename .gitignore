@@ -10,11 +10,6 @@ dist
 coverage
 *.lcov
 
-# logs
-logs
-_.log
-report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
-
 # dotenv environment variable files
 .env
 .env.development.local
@@ -35,3 +30,6 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 .cursor
 # agents/
+
+# the demo app is its own git repo (pushed to muzzlol/olly-demo-app)
+apps/demo
