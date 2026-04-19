@@ -10,6 +10,8 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "ai": "^6.0.168",
+    "ai-sdk-provider-opencode-sdk": "^3.0.2",
     "alchemy": "^0.91.2"
   }
 }
