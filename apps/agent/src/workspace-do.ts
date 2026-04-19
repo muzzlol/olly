@@ -34,6 +34,7 @@ import {
   type StateMsg,
 } from "../../../lib/ws-events.ts";
 import { wait, withTimeout } from "./lib/demo";
+import { triage } from "./states/triage";
 import {
   createClickHouseTools,
   type ClickHouseTools,
@@ -459,17 +460,7 @@ export class WorkspaceDO extends DurableObject<Env> {
     const stepMs = this.demo.isDemo ? DEMO_STEP_MS : PROD_STEP_MS;
 
     if (state === "TRIAGE") {
-      await traceTool(
-        this.emitter,
-        incidentId,
-        "clickhouse",
-        "getErrorRate",
-        { signature: signal.signature, windowSec: 300 },
-        () => Promise.resolve({ stub: true, count: 0 }),
-      );
-      // TODO: call real clickhouse tool + LLM classifier to gate real vs noise.
-      await wait(stepMs);
-      return true;
+      return this.runTriage(incidentId, signal);
     }
 
     if (state === "GATHER") {
@@ -531,6 +522,101 @@ export class WorkspaceDO extends DurableObject<Env> {
     }
 
     return true;
+  }
+
+  // ---------- TRIAGE ----------
+
+  private async runTriage(
+    incidentId: string,
+    signal: SignalEvent,
+  ): Promise<boolean> {
+    const verdict = await triage({
+      clickhouse: this.clickhouseTools(),
+      emit: this.emitter,
+      findOpenIncidentForSignature: (sig, excludeId) =>
+        this.findOpenIncidentExcluding(sig, excludeId),
+      incidentId,
+      recordGather: (id, key, value) => this.recordGather(id, key, value),
+      signal: {
+        errorClass: signal.errorClass,
+        message: signal.message,
+        route: signal.route,
+        service: signal.service,
+        signature: signal.signature,
+        stackTrace: signal.stackTrace,
+        statusCode: signal.statusCode,
+      },
+    }).catch((err: unknown) => {
+      this.escalate(incidentId, "triage_failed", err);
+      return { kind: "escalated" } as const;
+    });
+
+    if (verdict.kind === "deduped") {
+      this.sql.exec(
+        `UPDATE incidents
+         SET resolved_at = ?, resolution = 'deduped'
+         WHERE id = ?`,
+        Date.now(),
+        incidentId,
+      );
+      this.activeIncidentId = null;
+      this.state = "IDLE";
+      this.emit({
+        incidentId,
+        state: "IDLE",
+        ts: new Date().toISOString(),
+        type: "state",
+      });
+      return false;
+    }
+
+    if (verdict.kind === "out_of_scope") {
+      this.sql.exec(
+        `UPDATE incidents
+         SET resolved_at = ?, resolution = 'out_of_scope'
+         WHERE id = ?`,
+        Date.now(),
+        incidentId,
+      );
+      this.activeIncidentId = null;
+      this.state = "IDLE";
+      this.emit({
+        incidentId,
+        state: "IDLE",
+        ts: new Date().toISOString(),
+        type: "state",
+      });
+      return false;
+    }
+
+    if (verdict.kind === "escalated") {
+      return false;
+    }
+
+    return true;
+  }
+
+  private findOpenIncidentExcluding(
+    signature: string,
+    excludeId: string,
+  ): { id: string } | null {
+    const cutoff = Date.now() - DEDUPE_WINDOW_MS;
+    const rows = this.sql
+      .exec<IncidentRow>(
+        `SELECT * FROM incidents
+         WHERE signature = ?
+           AND id != ?
+           AND started_at >= ?
+           AND resolved_at IS NULL
+         ORDER BY started_at DESC
+         LIMIT 1`,
+        signature,
+        excludeId,
+        cutoff,
+      )
+      .toArray();
+
+    return rows[0] ?? null;
   }
 
   // ---------- GATHER ----------
